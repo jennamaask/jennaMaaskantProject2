@@ -9,7 +9,14 @@ $shadowRight: 20px 20px $secondaryColor1;
 $baseFont: 'Chathura', sans-serif;
 $logoFont: 'Tulpen One', cursive;
 
-
+@mixin text($color) {
+    font-family: $baseFont;
+   font-size: 1.95rem;
+   line-height: 30px;
+   letter-spacing: 1.9px;
+   color: $color;
+   text-decoration: none;
+}
 
 @mixin headers($alignment, $lineHeight, $letterSpacing, $color, $fontSize) {
     font-family:$baseFont;
@@ -37,16 +44,63 @@ $logoFont: 'Tulpen One', cursive;
     padding: 5px $padding;
 }
 
+@mixin secondaryHeader($url){
+    background: $url;
+    background-size: cover;
+    background-position: center center;
+    h2 {
+        @include headers(left, 1.14, 2.6px, white, 4.18rem)
+    }
+    height: 55vh;
+}
+
+@mixin formStyle($backgroundColor, $borderColor) {
+    display: float;
+    flex-wrap: wrap;
+    font-family: $baseFont;
+    font-size: 1.6rem;
+    background: $backgroundColor;
+    padding: 30px 70px 50px;
+    input {
+        padding: 20px;
+        border: none;
+        background: $backgroundColor;
+    }
+    input::placeholder {
+        color: white;
+        opacity: 1;
+    }
+    input[type=text] {
+        width: 50%;
+        border-bottom: 2px solid $borderColor;
+    }
+    input[type=email] {
+        width: 49%;
+        border-bottom: 2px solid $borderColor;
+    }
+    textarea {
+        width: 100%;
+        padding: 20px;
+        border: 2px solid $borderColor;
+        background: $backgroundColor;
+        margin: 50px 0
+    }
+    textarea::placeholder {
+        color: white;
+        opacity: 1;
+    }
+    .button {
+        @include button(0);
+        width: 100%;
+    }
+}
+
 html {
     font-size: 125%;
 }
 
 p {
-   font-family: $baseFont;
-   font-size: 1.95rem;
-   line-height: 30px;
-   letter-spacing: 1.9px;
-   color: white;
+   @include text(white);
 }
 
 h1 {

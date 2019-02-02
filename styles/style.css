@@ -1,3 +1,4 @@
+@charset "UTF-8";
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -132,6 +133,19 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
 html {
   font-size: 125%; }
 
@@ -140,7 +154,8 @@ p {
   font-size: 1.95rem;
   line-height: 30px;
   letter-spacing: 1.9px;
-  color: white; }
+  color: white;
+  text-decoration: none; }
 
 h1 {
   font-family: "Tulpen One", cursive;
@@ -161,7 +176,7 @@ img {
   display: block;
   width: 100%; }
 
-i {
+i.main {
   color: white;
   background: #bf2603;
   border-radius: 50%;
@@ -188,7 +203,7 @@ i {
   -ms-flex-align: center;
   align-items: center; }
 
-header {
+header.main {
   background: url("../assets/homeHeader.jpg");
   height: 90vh;
   position: relative;
@@ -203,7 +218,7 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-header h3 {
+header.main h3 {
   font-family: "Chathura", sans-serif;
   font-weight: 700;
   text-align: center;
@@ -221,7 +236,7 @@ header h3 {
   margin: 0 auto;
   margin-bottom: 175px; }
 
-header::after {
+header.main::after {
   content: "";
   background: #111010;
   height: 120px;
@@ -466,3 +481,262 @@ footer {
   padding: 5px; }
   footer p {
     margin: 0; }
+
+header.contact {
+  background: url(../assets/contactHeader.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 55vh; }
+  header.contact h2 {
+    font-family: "Chathura", sans-serif;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.14;
+    letter-spacing: 2.6px;
+    color: white;
+    font-size: 4.18rem; }
+
+.contactContent {
+  background: #111010;
+  padding: 110px 0 180px; }
+  .contactContent p {
+    margin: 0; }
+  .contactContent p:nth-of-type(1) {
+    margin: 20px 0 40px; }
+
+.social i {
+  color: white;
+  padding: 8px; }
+
+.contactContent .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .contactContent .wrapper .info {
+    width: 33.33%; }
+  .contactContent .wrapper .contactForm {
+    width: 66.66%;
+    position: relative; }
+    .contactContent .wrapper .contactForm form {
+      display: float;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      font-family: "Chathura", sans-serif;
+      font-size: 1.6rem;
+      background: #220303;
+      padding: 30px 70px 50px;
+      -webkit-box-shadow: 20px 20px #ff8327;
+      box-shadow: 20px 20px #ff8327;
+      position: absolute;
+      top: -250px; }
+      .contactContent .wrapper .contactForm form input {
+        padding: 20px;
+        border: none;
+        background: #220303; }
+      .contactContent .wrapper .contactForm form input::-webkit-input-placeholder {
+        color: white;
+        opacity: 1; }
+      .contactContent .wrapper .contactForm form input:-ms-input-placeholder {
+        color: white;
+        opacity: 1; }
+      .contactContent .wrapper .contactForm form input::-ms-input-placeholder {
+        color: white;
+        opacity: 1; }
+      .contactContent .wrapper .contactForm form input::placeholder {
+        color: white;
+        opacity: 1; }
+      .contactContent .wrapper .contactForm form input[type=text] {
+        width: 50%;
+        border-bottom: 2px solid white; }
+      .contactContent .wrapper .contactForm form input[type=email] {
+        width: 49%;
+        border-bottom: 2px solid white; }
+      .contactContent .wrapper .contactForm form textarea {
+        width: 100%;
+        padding: 20px;
+        border: 2px solid white;
+        background: #220303;
+        margin: 50px 0; }
+      .contactContent .wrapper .contactForm form textarea::-webkit-input-placeholder {
+        color: white;
+        opacity: 1; }
+      .contactContent .wrapper .contactForm form textarea:-ms-input-placeholder {
+        color: white;
+        opacity: 1; }
+      .contactContent .wrapper .contactForm form textarea::-ms-input-placeholder {
+        color: white;
+        opacity: 1; }
+      .contactContent .wrapper .contactForm form textarea::placeholder {
+        color: white;
+        opacity: 1; }
+      .contactContent .wrapper .contactForm form .button {
+        font-family: "Tulpen One", cursive;
+        text-align: center;
+        letter-spacing: 2.5px;
+        font-size: 1.6rem;
+        color: white;
+        margin: 0;
+        text-decoration: none;
+        background: #bf2603;
+        padding: 5px 0;
+        width: 100%; }
+
+header.blog {
+  background: url(../assets/blogHeader.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 55vh; }
+  header.blog h2 {
+    font-family: "Chathura", sans-serif;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.14;
+    letter-spacing: 2.6px;
+    color: white;
+    font-size: 4.18rem; }
+
+main.blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #111010; }
+  main.blog h3 {
+    font-family: "Chathura", sans-serif;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.17;
+    letter-spacing: 2.2px;
+    color: white;
+    font-size: 3.4rem; }
+  main.blog aside {
+    width: 33.33%; }
+  main.blog .primaryContent {
+    width: 66.66%; }
+
+.asideWrapper {
+  width: 70%;
+  margin: 100px auto 0;
+  background: #220303;
+  padding: 30px; }
+  .asideWrapper p {
+    margin: 0; }
+  .asideWrapper .asideText {
+    padding-top: 270px; }
+  .asideWrapper figure {
+    position: relative; }
+    .asideWrapper figure img {
+      width: 125%;
+      position: absolute;
+      right: 0;
+      top: -60px; }
+  .asideWrapper a {
+    font-family: "Chathura", sans-serif;
+    font-size: 1.95rem;
+    line-height: 30px;
+    letter-spacing: 1.9px;
+    color: #ff8327;
+    text-decoration: none; }
+  .asideWrapper ul {
+    padding: 0;
+    margin: 0; }
+  .asideWrapper li {
+    font-family: "Chathura", sans-serif;
+    font-size: 1.95rem;
+    line-height: 30px;
+    letter-spacing: 1.9px;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+    padding-left: 40px; }
+
+.asideWrapper li::before {
+  color: #bf2603;
+  content: '∙';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 4rem; }
+
+article figure {
+  position: relative; }
+
+article img {
+  width: calc(100% - 20px);
+  -webkit-box-shadow: -20px 20px #ff8327;
+  box-shadow: -20px 20px #ff8327;
+  position: absolute;
+  right: 0;
+  top: -150px; }
+
+article .articleText {
+  border-left: 4px solid #ff8327;
+  border-bottom: 4px solid #ff8327;
+  padding-top: 55%; }
+  article .articleText p:nth-of-type(1) {
+    color: #ff8327;
+    margin-top: 0; }
+
+.blogWrapper {
+  width: 800px;
+  margin: 0 auto 75px; }
+
+.comments form {
+  display: float;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-family: "Chathura", sans-serif;
+  font-size: 1.6rem;
+  background: #111010;
+  padding: 30px 70px 50px; }
+  .comments form input {
+    padding: 20px;
+    border: none;
+    background: #111010; }
+  .comments form input::-webkit-input-placeholder {
+    color: white;
+    opacity: 1; }
+  .comments form input:-ms-input-placeholder {
+    color: white;
+    opacity: 1; }
+  .comments form input::-ms-input-placeholder {
+    color: white;
+    opacity: 1; }
+  .comments form input::placeholder {
+    color: white;
+    opacity: 1; }
+  .comments form input[type=text] {
+    width: 50%;
+    border-bottom: 2px solid #ff8327; }
+  .comments form input[type=email] {
+    width: 49%;
+    border-bottom: 2px solid #ff8327; }
+  .comments form textarea {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #ff8327;
+    background: #111010;
+    margin: 50px 0; }
+  .comments form textarea::-webkit-input-placeholder {
+    color: white;
+    opacity: 1; }
+  .comments form textarea:-ms-input-placeholder {
+    color: white;
+    opacity: 1; }
+  .comments form textarea::-ms-input-placeholder {
+    color: white;
+    opacity: 1; }
+  .comments form textarea::placeholder {
+    color: white;
+    opacity: 1; }
+  .comments form .button {
+    font-family: "Tulpen One", cursive;
+    text-align: center;
+    letter-spacing: 2.5px;
+    font-size: 1.6rem;
+    color: white;
+    margin: 0;
+    text-decoration: none;
+    background: #bf2603;
+    padding: 5px 0;
+    width: 100%; }

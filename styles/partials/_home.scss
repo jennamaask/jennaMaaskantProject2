@@ -1,5 +1,5 @@
 
-i {
+i.main {
     color: white;
     background: $secondaryColor2;
     border-radius: 50%;
@@ -25,7 +25,7 @@ i {
     align-items: center;
 }
 
-header {
+header.main {
     background: url('../assets/homeHeader.jpg');
     height: 90vh;
     position: relative;
@@ -34,7 +34,7 @@ header {
     justify-content: space-between;
 }
 
-header h3 {
+header.main h3 {
     @include headers(center, 1.15, 2.6px, white, 4rem);
     position: absolute;
     bottom: -20px;
@@ -48,7 +48,7 @@ header h3 {
     margin-bottom: 175px;
 }
 
-header::after {
+header.main::after {
     content: "";
     background: $primaryColor;
     height: 120px;
@@ -205,7 +205,7 @@ header::after {
     .wrapper {
         display: flex;
         figure {
-            width: calc(33.33% - (80/3);
+            width: calc(33.33% - (80/3));
         }
     }
 }
