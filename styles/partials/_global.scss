@@ -1,0 +1,68 @@
+$primaryColor: #111010;
+$secondaryColor1: #ff8327;
+$secondaryColor2: #bf2603;
+$secondaryColor3: #220303;
+$footerColor:  	#505050;
+$shadowLeft: -20px 20px $secondaryColor1;
+$shadowRight: 20px 20px $secondaryColor1;
+
+$baseFont: 'Chathura', sans-serif;
+$logoFont: 'Tulpen One', cursive;
+
+
+
+@mixin headers($alignment, $lineHeight, $letterSpacing, $color, $fontSize) {
+    font-family:$baseFont;
+    font-weight: 700;
+    text-align: $alignment;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    color: $color;
+    font-size: $fontSize;
+}
+
+@mixin logo($letterSpacing, $fontSize, $fontColor){
+    font-family: $logoFont;
+    text-align: center;
+    letter-spacing: $letterSpacing;
+    font-size: $fontSize; 
+    color: $fontColor;
+    margin: 0;
+}
+
+@mixin button($padding) {
+    @include logo(2.5px, 1.6rem, white);
+    text-decoration: none;
+    background: $secondaryColor2;
+    padding: 5px $padding;
+}
+
+html {
+    font-size: 125%;
+}
+
+p {
+   font-family: $baseFont;
+   font-size: 1.95rem;
+   line-height: 30px;
+   letter-spacing: 1.9px;
+   color: white;
+}
+
+h1 {
+    @include logo(2.4px, 13rem, $secondaryColor1);
+}
+
+h3 {
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    width: 100%;
+}

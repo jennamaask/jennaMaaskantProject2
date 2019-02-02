@@ -1,0 +1,468 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 125%; }
+
+p {
+  font-family: "Chathura", sans-serif;
+  font-size: 1.95rem;
+  line-height: 30px;
+  letter-spacing: 1.9px;
+  color: white; }
+
+h1 {
+  font-family: "Tulpen One", cursive;
+  text-align: center;
+  letter-spacing: 2.4px;
+  font-size: 13rem;
+  color: #ff8327;
+  margin: 0; }
+
+h3 {
+  margin: 0; }
+
+.wrapper {
+  max-width: 1150px;
+  margin: 0 auto; }
+
+img {
+  display: block;
+  width: 100%; }
+
+i {
+  color: white;
+  background: #bf2603;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.2rem; }
+
+.container:nth-of-type(1) i {
+  padding: 11.5px 10px; }
+
+.container:nth-of-type(2) i {
+  padding: 13px 10px; }
+
+.container:nth-of-type(3) i {
+  padding: 10px 13px; }
+
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+header {
+  background: url("../assets/homeHeader.jpg");
+  height: 90vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+header h3 {
+  font-family: "Chathura", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.15;
+  letter-spacing: 2.6px;
+  color: white;
+  font-size: 4rem;
+  position: absolute;
+  bottom: -20px;
+  left: 10px; }
+
+.title {
+  position: relative;
+  width: 450px;
+  margin: 0 auto;
+  margin-bottom: 175px; }
+
+header::after {
+  content: "";
+  background: #111010;
+  height: 120px;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.about {
+  background: #111010;
+  padding: 75px 0; }
+
+.about h3 {
+  font-family: "Chathura", sans-serif;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.17;
+  letter-spacing: 2.2px;
+  color: white;
+  font-size: 3.4rem; }
+
+.about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 50%; }
+  .container .icon {
+    width: 20%; }
+  .container h3 {
+    width: 80%; }
+  .container p {
+    width: 100%;
+    padding-left: 20%;
+    margin: 0 0 70px; }
+
+.reservations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background: #220303; }
+  .reservations figure {
+    width: calc(50% - 100px);
+    position: relative; }
+  .reservations .content {
+    width: calc(50% - 100px); }
+    .reservations .content p {
+      margin: 0 0 30px; }
+
+.reservations figure:nth-of-type(1) {
+  margin-right: 200px; }
+  .reservations figure:nth-of-type(1) img {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    -webkit-box-shadow: 20px 20px #ff8327;
+    box-shadow: 20px 20px #ff8327; }
+
+.reservations figure:nth-of-type(2) {
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
+  order: 4;
+  margin-left: 200px; }
+  .reservations figure:nth-of-type(2) img {
+    position: absolute;
+    bottom: -50px;
+    -webkit-box-shadow: -20px 20px #ff8327;
+    box-shadow: -20px 20px #ff8327; }
+
+.reservations .content:nth-of-type(1) {
+  padding: 70px 40px 0 0;
+  margin-bottom: 50px; }
+  .reservations .content:nth-of-type(1) h3 {
+    font-family: "Chathura", sans-serif;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.17;
+    letter-spacing: 2.2px;
+    color: white;
+    font-size: 3.4rem; }
+
+.reservations .content:nth-of-type(2) {
+  margin-top: 50px;
+  text-align: right;
+  padding: 0 0 70px 40px; }
+  .reservations .content:nth-of-type(2) h3 {
+    font-family: "Chathura", sans-serif;
+    font-weight: 700;
+    text-align: right;
+    line-height: 1.17;
+    letter-spacing: 2.2px;
+    color: white;
+    font-size: 3.4rem; }
+  .reservations .content:nth-of-type(2) p {
+    text-align: left; }
+
+.reservations .button {
+  font-family: "Tulpen One", cursive;
+  text-align: center;
+  letter-spacing: 2.5px;
+  font-size: 1.6rem;
+  color: white;
+  margin: 0;
+  text-decoration: none;
+  background: #bf2603;
+  padding: 5px 30px; }
+
+.promotion {
+  background: #111010;
+  text-align: center;
+  padding: 175px 0 0; }
+  .promotion .wrapper {
+    padding: 0 40px 150px; }
+  .promotion .button {
+    font-family: "Tulpen One", cursive;
+    text-align: center;
+    letter-spacing: 2.5px;
+    font-size: 1.6rem;
+    color: white;
+    margin: 0;
+    text-decoration: none;
+    background: #bf2603;
+    padding: 5px 40px; }
+  .promotion h3 {
+    font-family: "Chathura", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.17;
+    letter-spacing: 2.2px;
+    color: #ff8327;
+    font-size: 3.4rem; }
+  .promotion p {
+    margin: 10px 0 39px; }
+
+.events {
+  background: #111010;
+  padding: 130px 0; }
+  .events .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .events .wrapper figure {
+      width: calc(30% - 60px);
+      margin-right: 60px;
+      padding-top: 20px; }
+    .events .wrapper .content {
+      width: calc(70% - 60px);
+      margin-left: 60px; }
+
+.events h3 {
+  font-family: "Chathura", sans-serif;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.17;
+  letter-spacing: 2.2px;
+  color: #ff8327;
+  font-size: 3.4rem; }
+
+.events .button {
+  font-family: "Tulpen One", cursive;
+  text-align: center;
+  letter-spacing: 2.5px;
+  font-size: 1.6rem;
+  color: white;
+  margin: 0;
+  text-decoration: none;
+  background: #bf2603;
+  padding: 5px 45px; }
+
+.events p {
+  margin: 0 0 39px; }
+
+.events img {
+  -webkit-box-shadow: -20px 20px #ff8327;
+  box-shadow: -20px 20px #ff8327; }
+
+.gallery {
+  background: #220303;
+  padding: 100px 0; }
+  .gallery .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .gallery .wrapper figure {
+      width: calc(33.33% - (80/3)); }
+
+.gallery figure:nth-child(1) {
+  margin-right: 20px; }
+
+.gallery figure:nth-child(2) {
+  margin: 0 20px; }
+
+.gallery figure:nth-child(3) {
+  margin-left: 20px; }
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  padding: 30px 0; }
+
+nav a {
+  text-decoration: none;
+  padding: 0 25px;
+  font-family: "Chathura", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  line-height: 29px;
+  letter-spacing: 1.9px;
+  color: white;
+  font-size: 1.9rem; }
+
+nav li.logo a {
+  font-family: "Tulpen One", cursive;
+  text-align: center;
+  letter-spacing: 1.9px;
+  font-size: 2.8rem;
+  color: white;
+  margin: 0; }
+
+nav .current a {
+  color: #ff8327; }
+
+footer {
+  background: #505050;
+  text-align: center;
+  padding: 5px; }
+  footer p {
+    margin: 0; }

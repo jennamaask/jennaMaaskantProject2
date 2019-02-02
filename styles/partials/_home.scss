@@ -1,0 +1,231 @@
+
+i {
+    color: white;
+    background: $secondaryColor2;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.container:nth-of-type(1) i {
+    padding: 11.5px 10px;
+}
+
+.container:nth-of-type(2) i {
+    padding: 13px 10px;
+}
+
+.container:nth-of-type(3) i {
+    padding: 10px 13px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background: url('../assets/homeHeader.jpg');
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header h3 {
+    @include headers(center, 1.15, 2.6px, white, 4rem);
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+}
+
+.title {
+    position: relative;
+    width: 450px;
+    margin: 0 auto;
+    margin-bottom: 175px;
+}
+
+header::after {
+    content: "";
+    background: $primaryColor;
+    height: 120px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+.about {
+    background: $primaryColor;
+    padding: 75px 0;
+}
+
+.about h3 {
+    @include headers(left, 1.17, 2.2px, white, 3.4rem)
+}
+
+.about .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    .icon {
+        width: 20%;
+    }
+    h3 {
+        width: 80%
+    }
+    p {
+        width: 100%;
+        padding-left: 20%;
+        margin: 0 0 70px;
+    }
+}
+
+.reservations {
+    display: flex;
+    flex-wrap: wrap;
+    background: $secondaryColor3;
+    figure {
+        width: calc(50% - 100px);
+        position: relative;
+    }
+    .content {
+        width: calc(50% - 100px);
+        p {
+            margin: 0 0 30px;
+        }
+    }
+}
+
+.reservations figure:nth-of-type(1) {
+    margin-right: 200px;
+    img {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        box-shadow: $shadowRight;
+    }
+}
+
+.reservations figure:nth-of-type(2) {
+    order: 4;
+    margin-left: 200px;
+    img {
+        position: absolute;
+        bottom: -50px;
+        box-shadow: $shadowLeft;
+    }
+}
+
+.reservations .content:nth-of-type(1) {
+    padding: 70px 40px 0 0;
+    margin-bottom: 50px;
+    h3 {
+    @include headers(left, 1.17, 2.2px, white,3.4rem);
+    }
+}
+
+.reservations .content:nth-of-type(2) {
+    margin-top: 50px;
+    text-align: right;
+    padding: 0 0 70px 40px;
+    h3 {
+        @include headers(right, 1.17, 2.2px, white, 3.4rem);
+    }
+    p {
+        text-align: left;
+    }
+}
+
+.reservations .button {
+    @include button(30px);
+}
+
+.promotion {
+    background: $primaryColor;
+    text-align: center;
+    padding: 175px 0 0;
+    .wrapper {
+        padding: 0 40px 150px;
+    }
+    .button {
+        @include button(40px);
+    }
+    h3 {
+        @include headers(center, 1.17, 2.2px, $secondaryColor1, 3.4rem)
+    }
+    p {
+        margin: 10px 0 39px;
+    }
+}
+
+.events {
+    background: $primaryColor;
+    padding: 130px 0;
+    .wrapper {
+        display: flex;
+        figure {
+            width: calc(30% - 60px);
+            margin-right: 60px;
+            padding-top: 20px;
+        }
+        .content {
+            width: calc(70% - 60px);
+            margin-left: 60px;
+        }
+    }
+}
+
+.events {
+    h3 {
+        @include headers(left, 1.17, 2.2px, $secondaryColor1, 3.4rem )
+    }
+    .button {
+        @include button(45px);
+    }
+    p {
+        margin: 0 0 39px; 
+    }
+    img {
+        box-shadow: $shadowLeft;
+    }
+}
+
+.gallery {
+    background: $secondaryColor3;
+    padding: 100px 0;
+    .wrapper {
+        display: flex;
+        figure {
+            width: calc(33.33% - (80/3);
+        }
+    }
+}
+
+.gallery figure:nth-child(1) {
+    margin-right: 20px;
+}
+
+.gallery figure:nth-child(2) {
+    margin: 0 20px;
+}
+
+.gallery figure:nth-child(3) {
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
