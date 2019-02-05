@@ -19,12 +19,13 @@ header.contact {
 
 .contactContent .wrapper {
     display: flex;
+    flex-direction: row-reverse;
     .info {
         width: 33.33%;
     }
     .contactForm {
         width: 66.66%;
-        position:relative;
+        position: relative;
         form{
             @include formStyle($secondaryColor3, white);
             box-shadow: $shadowRight;

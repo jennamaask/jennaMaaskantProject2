@@ -27,6 +27,51 @@
             width: calc(40% - 50px);
         }
     }
+    .contactContent .wrapper .contactForm form {
+        input[type=text] {
+            width: 100%;
+            margin: 0;
+        }
+        input[type=email] {
+            width: 100%;
+        }
+    }
+    main.blog {
+        flex-direction: column;
+        aside {
+            width: 100%;
+            padding: 0 0 80px;
+        }
+        .primaryContent {
+            width: 80%;
+            margin: 0 auto;
+            .articleText {
+                border-right: 4px solid $secondaryColor1;
+            }
+        }
+    }
+
+    .asideWrapper {
+        width: 80%;
+        margin-top: 0;
+        display: flex;
+        figure {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            img {
+                position:relative;
+                width: 100%;
+                top: 0;
+            }
+        }
+        .asideText {
+            padding: 0 0 0 40px;
+            width: 60%;
+        }
+    }
+
+
 }
 
 @media (max-width: 1078px) {
@@ -105,6 +150,40 @@
             width: 100%;
         }
     }
+    .contactContent {
+    padding: 0 0 70px;
+        .wrapper {
+            flex-direction: column;
+            .contactForm {
+                width: 100%;
+                form {
+                    position: relative;
+                    top: -80px;
+                }
+            }
+            .info {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+    .asideWrapper {
+        flex-direction: column;
+        figure, .asideText {
+            width: 80%;
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+    .comments form {
+        input[type=text] {
+            width: 100%;
+            margin: 0;
+        }
+        input[type=email] {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -132,50 +211,11 @@
         margin: 20px 0 0 0;
     }
 
-    header .wrapper {
-        padding-top: 20px;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-        h2 {
-            margin: 0;
-            width: 90%;
-        }
-        .title {
-            margin-top: 100px;
-            margin: 0;
-        }
-        h1 {
-            font-size: 10rem;
-        }
-        h3 {
-            left: 55px;
-        }
-        // .title {
-        //     width: 90%;
-        // }
-        // h1 {
-        //     font-size: 10rem;
-        //     text-align: left;
-        // }
-        // h3 {
-        //     font-size: 5rem;
-        //     bottom: -40px;
-        // }
-    }
     nav {
-        display: flex;
-        justify-content: flex-end;
         width: 10%;
         padding-top: 40px;
     }
-    nav > a {
-        display: block;
-        width: 10%;
-        @include logo(1.9px, 2.8rem, white);
-        padding: 0;
-    }
+
     nav i {
         display: block;
         color: white;

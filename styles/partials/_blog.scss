@@ -4,6 +4,7 @@ header.blog {
 
 main.blog {
     display: flex;
+    flex-direction: row-reverse;
     background: $primaryColor;
     h3 {
         @include headers(left, 1.17, 2.2px, white, 3.4rem);
@@ -13,7 +14,6 @@ main.blog {
     }
     .primaryContent {
         width: 66.66%;
-        transform: translateY(-150px);
     }
 }
 
@@ -63,21 +63,20 @@ main.blog {
 
 article {
     figure {
-        // position: relative;
+        position: relative;
         
     }
     img{
         width: calc(100% - 20px);
         box-shadow: $shadowLeft;
-        transform: translateX(20px); 
-        // position: absolute;
-        // right: 0;
-        // top: -150px;  
+        position: absolute;
+        right: 0;
+        top: -150px;  
     }
     .articleText {
         border-left: 4px solid $secondaryColor1;
         border-bottom: 4px solid $secondaryColor1;
-        padding: 75px 0 75px;
+        padding: 55% 0 75px;
         p:nth-of-type(1) {
             color: $secondaryColor1;
             margin-top: 0;
