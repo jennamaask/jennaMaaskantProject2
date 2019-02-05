@@ -9,13 +9,13 @@ $shadowRight: 20px 20px $secondaryColor1;
 $baseFont: 'Chathura', sans-serif;
 $logoFont: 'Tulpen One', cursive;
 
-@mixin text($color) {
+@mixin text($color, $fontSize) {
     font-family: $baseFont;
-   font-size: 1.95rem;
-   line-height: 30px;
-   letter-spacing: 1.9px;
-   color: $color;
-   text-decoration: none;
+    font-size: $fontSize;
+    line-height: .78;
+    letter-spacing: .049em;
+    color: $color;
+    text-decoration: none;
 }
 
 @mixin headers($alignment, $lineHeight, $letterSpacing, $color, $fontSize) {
@@ -38,7 +38,7 @@ $logoFont: 'Tulpen One', cursive;
 }
 
 @mixin button($padding) {
-    @include logo(2.5px, 1.6rem, white);
+    @include logo(.078em, 1.6rem, white);
     text-decoration: none;
     background: $secondaryColor2;
     padding: 5px $padding;
@@ -50,7 +50,7 @@ $logoFont: 'Tulpen One', cursive;
     background-size: cover;
     background-position: center center;
     h2 {
-        @include headers(left, 1.14, 2.6px, white, 4.18rem)
+        @include headers(left, 1.14, .0311em, white, 4.18rem)
     }
     height: 55vh;
 }
@@ -107,11 +107,11 @@ html {
 }
 
 p {
-   @include text(white);
+   @include text(white, 1.95rem);
 }
 
 h1 {
-    @include logo(2.4px, 13rem, $secondaryColor1);
+    @include logo(0.0092em, 13rem, $secondaryColor1);
 }
 
 h3 {
@@ -119,8 +119,8 @@ h3 {
 }
 
 .wrapper {
-    width: 80%;
-    max-width: 1150px;
+    // width: 80%;
+    max-width: 1250px;
     margin: 0 auto;
 }
 

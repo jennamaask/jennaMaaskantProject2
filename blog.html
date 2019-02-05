@@ -11,10 +11,21 @@
     <title>Bar One | Blog</title>
 </head>
 <body>
+    <input type="checkbox" id="menu" name="menu">
+    <nav class='dropDown'>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     <!-- header -->
     <header class='blog'>
         <div class="wrapper">
-            <nav>
+            <nav class="mainMenu">
+                <label class="menu" for="menu"><i class="fas fa-bars"></i><i class="fas fa-times"></i></label>
+                <i class="fas fa-bars"></i>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <i class="fas fa-bars"></i>

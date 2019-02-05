@@ -152,15 +152,15 @@ html {
 p {
   font-family: "Chathura", sans-serif;
   font-size: 1.95rem;
-  line-height: 30px;
-  letter-spacing: 1.9px;
+  line-height: .78;
+  letter-spacing: .049em;
   color: white;
   text-decoration: none; }
 
 h1 {
   font-family: "Tulpen One", cursive;
   text-align: center;
-  letter-spacing: 2.4px;
+  letter-spacing: 0.0092em;
   font-size: 13rem;
   color: #ff8327;
   margin: 0; }
@@ -169,8 +169,7 @@ h3 {
   margin: 0; }
 
 .wrapper {
-  width: 80%;
-  max-width: 1150px;
+  max-width: 1250px;
   margin: 0 auto; }
 
 img {
@@ -210,8 +209,22 @@ i.main {
 
 header.main {
   background: url("../assets/homeHeader.jpg");
-  height: 90vh;
+  height: 80vh;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative; }
+
+header.main .wrapper {
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,12 +236,18 @@ header.main {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
+header figure {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  bottom: -125px; }
+
 header.main h3 {
   font-family: "Chathura", sans-serif;
   font-weight: 700;
   text-align: center;
   line-height: 1.15;
-  letter-spacing: 2.6px;
+  letter-spacing: 0.0325em;
   color: white;
   font-size: 4rem;
   position: absolute;
@@ -239,27 +258,19 @@ header.main h3 {
   position: relative;
   width: 450px;
   margin: 0 auto;
-  margin-bottom: 175px; }
-
-header.main::after {
-  content: "";
-  background: #111010;
-  height: 120px;
-  width: 50%;
-  position: absolute;
-  bottom: 0;
-  left: 0; }
+  z-index: 10;
+  margin-bottom: 50px; }
 
 .about {
   background: #111010;
-  padding: 75px 0; }
+  padding: 200px 0 75px; }
 
 .about h3 {
   font-family: "Chathura", sans-serif;
   font-weight: 700;
   text-align: left;
   line-height: 1.17;
-  letter-spacing: 2.2px;
+  letter-spacing: 0.032em;
   color: white;
   font-size: 3.4rem; }
 
@@ -278,12 +289,13 @@ header.main::after {
   flex-wrap: wrap;
   width: 50%; }
   .container .icon {
-    width: 20%; }
+    width: 10%; }
   .container h3 {
-    width: 80%; }
+    width: 90%;
+    padding-left: 20px; }
   .container p {
     width: 100%;
-    padding-left: 20%;
+    padding-left: calc(10% + 20px);
     margin: 0 0 70px; }
 
 .reservations {
@@ -297,7 +309,17 @@ header.main::after {
     position: relative;
     width: calc(50% - 120px); }
   .reservations .content {
-    width: calc(50% - 120px); }
+    width: calc(50% - 120px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
     .reservations .content p {
       margin: 0 0 30px; }
 
@@ -319,38 +341,38 @@ header.main::after {
     box-shadow: -20px 20px #ff8327; }
 
 .reservations .content:nth-of-type(1) {
-  padding: 70px 40px 0 0;
-  margin-bottom: 50px;
+  width: calc(50% - 120px);
+  padding-right: calc((50% - 120px) - 500px);
   margin-left: 120px; }
   .reservations .content:nth-of-type(1) h3 {
     font-family: "Chathura", sans-serif;
     font-weight: 700;
     text-align: left;
     line-height: 1.17;
-    letter-spacing: 2.2px;
+    letter-spacing: 0.032em;
     color: white;
     font-size: 3.4rem; }
 
 .reservations .content:nth-of-type(2) {
-  margin-top: 20px;
   margin-right: 120px;
-  text-align: right;
-  padding: 0 0 70px 40px; }
+  padding-bottom: 50px;
+  padding-left: calc((50% - 120px) - 505px); }
   .reservations .content:nth-of-type(2) h3 {
     font-family: "Chathura", sans-serif;
     font-weight: 700;
     text-align: right;
     line-height: 1.17;
-    letter-spacing: 2.2px;
+    letter-spacing: 0.032em;
     color: white;
     font-size: 3.4rem; }
-  .reservations .content:nth-of-type(2) p {
-    text-align: left; }
+  .reservations .content:nth-of-type(2) .button {
+    -ms-flex-item-align: end;
+    align-self: flex-end; }
 
 .reservations .button {
   font-family: "Tulpen One", cursive;
   text-align: center;
-  letter-spacing: 2.5px;
+  letter-spacing: 0.078em;
   font-size: 1.6rem;
   color: white;
   margin: 0;
@@ -359,7 +381,8 @@ header.main::after {
   padding: 5px 30px;
   -webkit-transition: all .3s;
   -o-transition: all .3s;
-  transition: all .3s; }
+  transition: all .3s;
+  width: 150px; }
 
 .promotion {
   background: #111010;
@@ -370,7 +393,7 @@ header.main::after {
   .promotion .button {
     font-family: "Tulpen One", cursive;
     text-align: center;
-    letter-spacing: 2.5px;
+    letter-spacing: 0.078em;
     font-size: 1.6rem;
     color: white;
     margin: 0;
@@ -385,7 +408,7 @@ header.main::after {
     font-weight: 700;
     text-align: center;
     line-height: 1.17;
-    letter-spacing: 2.2px;
+    letter-spacing: 0.032em;
     color: #ff8327;
     font-size: 3.4rem; }
   .promotion p {
@@ -413,14 +436,14 @@ header.main::after {
   font-weight: 700;
   text-align: left;
   line-height: 1.17;
-  letter-spacing: 2.2px;
+  letter-spacing: 0.032em;
   color: #ff8327;
   font-size: 3.4rem; }
 
 .events .button {
   font-family: "Tulpen One", cursive;
   text-align: center;
-  letter-spacing: 2.5px;
+  letter-spacing: 0.078em;
   font-size: 1.6rem;
   color: white;
   margin: 0;
@@ -475,14 +498,14 @@ nav a {
   font-weight: 700;
   text-align: center;
   line-height: 29px;
-  letter-spacing: 1.9px;
+  letter-spacing: 0.05em;
   color: white;
   font-size: 1.9rem; }
 
 nav li.logo a {
   font-family: "Tulpen One", cursive;
   text-align: center;
-  letter-spacing: 1.9px;
+  letter-spacing: 0.034em;
   font-size: 2.8rem;
   color: white;
   margin: 0; }
@@ -493,10 +516,13 @@ nav .current a {
 nav li a:hover {
   color: #ff8327; }
 
-nav i {
+input[type="checkbox"] {
   display: none; }
 
-nav > a {
+label.menu {
+  display: none; }
+
+nav.dropDown {
   display: none; }
 
 footer {
@@ -516,7 +542,7 @@ header.contact {
     font-weight: 700;
     text-align: left;
     line-height: 1.14;
-    letter-spacing: 2.6px;
+    letter-spacing: 0.0311em;
     color: white;
     font-size: 4.18rem; }
 
@@ -606,7 +632,7 @@ header.contact {
       .contactContent .wrapper .contactForm form .button {
         font-family: "Tulpen One", cursive;
         text-align: center;
-        letter-spacing: 2.5px;
+        letter-spacing: 0.078em;
         font-size: 1.6rem;
         color: white;
         margin: 0;
@@ -628,7 +654,7 @@ header.blog {
     font-weight: 700;
     text-align: left;
     line-height: 1.14;
-    letter-spacing: 2.6px;
+    letter-spacing: 0.0311em;
     color: white;
     font-size: 4.18rem; }
 
@@ -646,7 +672,7 @@ main.blog {
     font-weight: 700;
     text-align: left;
     line-height: 1.17;
-    letter-spacing: 2.2px;
+    letter-spacing: 0.032em;
     color: white;
     font-size: 3.4rem; }
   main.blog aside {
@@ -673,8 +699,8 @@ main.blog {
   .asideWrapper a {
     font-family: "Chathura", sans-serif;
     font-size: 1.95rem;
-    line-height: 30px;
-    letter-spacing: 1.9px;
+    line-height: .78;
+    letter-spacing: .049em;
     color: #ff8327;
     text-decoration: none; }
   .asideWrapper ul {
@@ -683,8 +709,8 @@ main.blog {
   .asideWrapper li {
     font-family: "Chathura", sans-serif;
     font-size: 1.95rem;
-    line-height: 30px;
-    letter-spacing: 1.9px;
+    line-height: .78;
+    letter-spacing: .049em;
     color: white;
     text-decoration: none;
     list-style: none;
@@ -715,7 +741,12 @@ article .articleText {
   border-bottom: 4px solid #ff8327;
   padding: 55% 0 75px; }
   article .articleText p:nth-of-type(1) {
+    font-family: "Chathura", sans-serif;
+    font-size: 1.95rem;
+    line-height: .78;
+    letter-spacing: .049em;
     color: #ff8327;
+    text-decoration: none;
     margin-top: 0; }
 
 .blogWrapper {
@@ -728,16 +759,21 @@ article .articleText {
 .commentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
   .commentContainer figure {
     width: calc(15% - 20px);
     margin: 10px 40px 0 0; }
   .commentContainer .commentsText {
     width: calc(85% - 20px); }
     .commentContainer .commentsText .date {
-      margin: 0 0 10px;
+      font-family: "Chathura", sans-serif;
+      font-size: 2.2rem;
+      line-height: .78;
+      letter-spacing: .049em;
       color: #ff8327;
-      font-size: 2.2rem; }
+      text-decoration: none; }
     .commentContainer .commentsText p {
       margin: 0; }
 
@@ -801,7 +837,7 @@ article .articleText {
   .comments form .button {
     font-family: "Tulpen One", cursive;
     text-align: center;
-    letter-spacing: 2.5px;
+    letter-spacing: 0.078em;
     font-size: 1.6rem;
     color: white;
     margin: 0;
@@ -813,23 +849,23 @@ article .articleText {
     transition: all .3s;
     width: 100%; }
 
-@media (max-width: 1362px) {
-  .reservations figure, .reservations .content {
-    width: calc(50% - 50px); }
+@media (max-width: 1250px) {
+  .wrapper {
+    width: 80%; }
   .reservations figure:nth-of-type(1) {
-    margin-right: 50px; }
+    margin-right: 50px;
+    width: calc(50% - 50px); }
   .reservations figure:nth-of-type(2) {
-    margin-left: 50px; }
+    margin-left: 50px;
+    width: calc(50% - 50px); }
   .reservations .content:nth-of-type(1) {
-    margin-left: 50px; }
+    padding-right: calc((50% - 50px) * 0.2);
+    margin-left: 50px;
+    width: calc(50% - 50px); }
   .reservations .content:nth-of-type(2) {
-    margin-right: 50px; } }
-
-@media (max-width: 1222px) {
-  .reservations figure {
-    width: calc(60% - 50px); }
-  .reservations .content {
-    width: calc(40% - 50px); }
+    padding-left: calc((50% - 50px) * 0.2);
+    margin-right: 50px;
+    width: calc(50% - 50px); }
   .contactContent .wrapper .contactForm form input[type=text] {
     width: 100%;
     margin: 0; }
@@ -870,21 +906,19 @@ article .articleText {
       padding: 0 0 0 40px;
       width: 60%; } }
 
-@media (max-width: 1078px) {
+@media (max-width: 1050px) {
   .reservations {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .reservations figure {
-      width: calc(100% - 20px); }
-    .reservations .content {
-      width: 80%; }
     .reservations .content:nth-of-type(1) {
       margin: 0 auto;
+      width: 80%;
       padding: 30px 0 80px; }
     .reservations .content:nth-of-type(2) {
       margin: 0 auto;
+      width: 80%;
       padding: 80px 0; }
     .reservations figure:nth-of-type(2) {
       -webkit-box-ordinal-group: inherit;
@@ -892,9 +926,11 @@ article .articleText {
       order: inherit;
       margin: 0 auto;
       top: 0;
-      right: -10px; }
+      right: -10px;
+      width: calc(100% - 20px); }
     .reservations figure:nth-of-type(1) {
-      margin: 0; }
+      margin: 0;
+      width: calc(100% - 20px); }
   .promotion {
     padding-top: 75px; }
     .promotion .wrapper {
@@ -961,7 +997,14 @@ article .articleText {
     width: 100%;
     margin: 0; }
   .comments form input[type=email] {
-    width: 100%; } }
+    width: 100%; }
+  .commentContainer figure {
+    margin-right: 10px;
+    width: calc(30% - 10px); }
+  .commentContainer .commentsText {
+    width: calc(70% - 10px); }
+  main.blog .primaryContent .articleText {
+    padding: 45% 0 30px; } }
 
 @media (max-width: 768px) {
   .about .wrapper .container h3 {
@@ -982,11 +1025,104 @@ article .articleText {
   .gallery figure:nth-child(3) {
     margin: 20px 0 0 0; }
   nav {
-    width: 10%;
-    padding-top: 40px; }
-  nav i {
+    width: 100%;
+    padding-top: 40px;
+    position: relative; }
+  .menu i.fa-bars {
     display: block;
     color: white;
-    font-size: 1.5rem; }
-  nav ul {
+    font-size: 1.5rem;
+    cursor: pointer;
+    -webkit-transition: color .3s;
+    -o-transition: color .3s;
+    transition: color .3s; }
+  .menu i.fa-bars:hover {
+    color: #ff8327; }
+  .menu {
+    position: fixed;
+    top: 10px;
+    left: 10px; }
+  nav.dropDown {
+    display: block;
+    background: rgba(0, 0, 0, 0.9);
+    list-style: none;
+    padding: 0;
+    position: fixed;
+    z-index: 30;
+    width: 100%;
+    right: 0;
+    top: -100%;
+    height: 100%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+    nav.dropDown ul {
+      padding: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 100vh; }
+      nav.dropDown ul a {
+        font-size: 4rem; }
+  nav.mainMenu {
+    background: black; }
+  input[type="checkbox"]:checked + .dropDown {
+    top: 0; }
+  input[type='checkbox']:checked ~ header label.menu i.fa-bars {
+    display: none; }
+  input[type='checkbox']:checked ~ header label.menu i.fa-times {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s; }
+  i.fa-times:hover {
+    color: #ff8327; }
+  label.menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    z-index: 40; }
+  .menu i.fa-times {
+    display: none; }
+  nav.mainMenu ul {
+    display: none; }
+  header figure {
     display: none; } }
+
+@media (max-width: 414px) {
+  main.blog .primaryContent .articleText {
+    padding-top: 30%; }
+  main.blog .primaryContent, .blogWrapper, .wrapper {
+    width: 95%; }
+  .comments form, .contactContent .wrapper .contactForm form {
+    padding: 10px; }
+  main.blog aside {
+    padding-bottom: 30px; }
+  .asideWrapper {
+    width: 95%;
+    padding: 20px 0; }
+    .asideWrapper .asideText {
+      width: 95%; }
+  .events .wrapper figure {
+    float: none;
+    width: calc(100% - 20px);
+    margin: 0 0 0 20px; }
+  p, .asideWrapper li, article .articleText p:nth-of-type(1), .asideWrapper a {
+    font-size: 1.7rem; }
+  .commentContainer .commentsText .date {
+    font-size: 1.9rem; }
+  .about h3, .reservations .content:nth-of-type(1) h3, .reservations .content:nth-of-type(2) h3, .promotion h3, .events h3, main.blog h3, main.blog h3 {
+    font-size: 3rem; } }

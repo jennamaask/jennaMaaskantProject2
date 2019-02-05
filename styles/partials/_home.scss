@@ -27,15 +27,30 @@ i.main {
 
 header.main {
     background: url('../assets/homeHeader.jpg');
-    height: 90vh;
+    height: 80vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+header.main .wrapper {
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+header figure {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: -125px;
+}
+
 header.main h3 {
-    @include headers(center, 1.15, 2.6px, white, 4rem);
+    @include headers(center, 1.15, .0325em, white, 4rem);
     position: absolute;
     bottom: -20px;
     left: 10px;
@@ -45,26 +60,17 @@ header.main h3 {
     position: relative;
     width: 450px;
     margin: 0 auto;
-    margin-bottom: 175px;
-}
-
-header.main::after {
-    content: "";
-    background: $primaryColor;
-    height: 120px;
-    width: 50%;
-    position: absolute;
-    bottom: 0;
-    left: 0
+    z-index: 10;
+    margin-bottom: 50px;
 }
 
 .about {
     background: $primaryColor;
-    padding: 75px 0;
+    padding: 200px 0 75px;
 }
 
 .about h3 {
-    @include headers(left, 1.17, 2.2px, white, 3.4rem)
+    @include headers(left, 1.17, .032em, white, 3.4rem)
 }
 
 .about .wrapper {
@@ -77,14 +83,15 @@ header.main::after {
     flex-wrap: wrap;
     width: 50%;
     .icon {
-        width: 20%;
+        width: 10%;
     }
     h3 {
-        width: 80%
+        width: 90%;
+        padding-left: 20px;
     }
     p {
         width: 100%;
-        padding-left: 20%;
+        padding-left: calc(10% + 20px);
         margin: 0 0 70px;
     }
 }
@@ -99,16 +106,15 @@ header.main::after {
     }
     .content {
         width: calc(50% - 120px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         p {
             margin: 0 0 30px;
             
         }
     }
 }
-
-// .reservations {
-//     background: $secondaryColor3;
-// }
 
 .reservations figure:nth-of-type(1) {
     // float: left;
@@ -141,13 +147,15 @@ header.main::after {
 
 .reservations .content:nth-of-type(1) {
     // float: left;
-    // width: calc(50% - 120px);
+    width: calc(50% - 120px);
+    padding-right: calc((50% - 120px) - 500px);
     // margin: 20px 0 20px 100px; 
-    padding: 70px 40px 0 0;
-    margin-bottom: 50px;
+    // padding: 70px 0 40px 0;
+    // margin-bottom: 50px;
     margin-left: 120px;
+    // padding-top: 30px;
     h3 {
-    @include headers(left, 1.17, 2.2px, white,3.4rem);
+    @include headers(left, 1.17, 0.032em, white, 3.4rem);
     }
 }
 
@@ -156,20 +164,26 @@ header.main::after {
     // width: calc(50% - 120px);
     // margin: 20px 100px 100px 0;
     // padding-left: 20px;
-    margin-top: 20px;
+    // margin-top: 20px;
     margin-right: 120px;
-    text-align: right;
-    padding: 0 0 70px 40px;
+    padding-bottom: 50px;
+    padding-left: calc((50% - 120px) - 505px);
+    // padding: 0 0 70px 40px;
     h3 {
-        @include headers(right, 1.17, 2.2px, white, 3.4rem);
+        @include headers(right, 1.17, .032em, white, 3.4rem);
     }
-    p {
-        text-align: left;
+    .button {
+        align-self: flex-end;
     }
+    // .innerContent {
+    //     width: 505px;
+    //     margin-left: calc(100% - 505px);
+    // }
 }
 
 .reservations .button {
     @include button(30px);
+    width: 150px;
 }
 
 .promotion {
@@ -183,7 +197,7 @@ header.main::after {
         @include button(40px);
     }
     h3 {
-        @include headers(center, 1.17, 2.2px, $secondaryColor1, 3.4rem)
+        @include headers(center, 1.17, .032em, $secondaryColor1, 3.4rem)
     }
     p {
         margin: 10px 0 39px;
@@ -210,7 +224,7 @@ header.main::after {
 
 .events {
     h3 {
-        @include headers(left, 1.17, 2.2px, $secondaryColor1, 3.4rem )
+        @include headers(left, 1.17, .032em, $secondaryColor1, 3.4rem )
     }
     .button {
         @include button(45px);

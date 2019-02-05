@@ -9,11 +9,11 @@ nav ul {
 nav a {
     text-decoration: none;
     padding: 0 25px;
-    @include headers(center, 29px, 1.9px, white, 1.9rem)
+    @include headers(center, 29px, 0.05em, white, 1.9rem)
 }
 
 nav li.logo a {
-    @include logo(1.9px, 2.8rem, white);
+    @include logo(.034em, 2.8rem, white);
 }
 
 nav .current a{
@@ -24,10 +24,14 @@ nav li a:hover {
     color: $secondaryColor1;
 }
 
-nav i {
+input[type="checkbox"]{
     display: none;
 }
 
-nav > a {
+label.menu {
+    display: none;
+}
+
+nav.dropDown {
     display: none;
 }

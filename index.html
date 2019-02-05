@@ -10,12 +10,20 @@
     <title>Bar One</title>
 </head>
 <body>
+    <input type="checkbox" id="menu" name="menu">
+    <nav class='dropDown'>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     <!-- start of header -->
     <header class='main'>
         <div class="wrapper">
-            <nav>
-                <!-- <a class='logo' href="index.html">Bar One</a> -->
-                <i class="fas fa-bars"></i>
+            <label class="menu" for="menu"><i class="fas fa-bars"></i><i class="fas fa-times"></i></label>
+            <nav class='mainMenu'>
                 <ul>
                     <li class='current'><a href="index.html">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -27,8 +35,11 @@
             <div class="title">
                 <h1>Bar-One</h1>
                 <h3>Place to be is</h3>
-            </title>
+            </div>
         </div>
+        <figure>
+                <img src="assets/headerBoxImage.jpg" alt="">
+        </figure> 
     </header>
     <!-- start of main -->
     <main>
@@ -77,17 +88,21 @@
                 <img src="assets/mainLeft.jpg" alt="A bar with an orange color shceme and many different shaped incandescent light bulbs hanging over it.">
             </figure>
             <div class="content">
-                <h3>Plan ahead</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quisquam, autem ex molestiae eaque accusamus. Sunt error sint neque facilis cum eligendi voluptas quibusdam aspernatur.</p>
-                <a class='button' href="">Read more</a>
+                <!-- <div class="innerContent"> -->
+                    <h3>Plan ahead</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quisquam, autem ex molestiae eaque accusamus. Sunt error sint neque facilis</p>
+                    <a class='button' href="">Read more</a>
+                <!-- </div> -->
             </div>
             <figure>
                 <img src="assets/mainRight.jpg" alt="A bar with many empty stools and two people sitting on the far end.">
             </figure>
             <div class="content">
-                <h3>Plan ahead</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quisquam, autem ex molestiae eaque accusamus. Sunt error sint neque facilis cum eligendi voluptas quibusdam aspernatur.</p>
-                <a class='button' href="">Read more</a>
+                <!-- <div class="innerContent"> -->
+                    <h3>Plan ahead</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quisquam, autem ex molestiae eaque accusamus. Sunt error sint neque facilis</p>
+                    <a class='button' href="">Read more</a>
+                <!-- </div> -->
             </div>
         </section>
         <section class="promotion">
