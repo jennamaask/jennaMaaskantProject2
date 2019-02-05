@@ -13,9 +13,21 @@ nav a {
 }
 
 nav li.logo a {
-    @include logo(1.9px, 2.8rem, white)
+    @include logo(1.9px, 2.8rem, white);
 }
 
 nav .current a{
     color: $secondaryColor1;
+}
+
+nav li a:hover {
+    color: $secondaryColor1;
+}
+
+nav i {
+    display: none;
+}
+
+nav > a {
+    display: none;
 }

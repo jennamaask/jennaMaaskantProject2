@@ -94,47 +94,70 @@ header.main::after {
     flex-wrap: wrap;
     background: $secondaryColor3;
     figure {
-        width: calc(50% - 100px);
         position: relative;
+        width: calc(50% - 120px);
     }
     .content {
-        width: calc(50% - 100px);
+        width: calc(50% - 120px);
         p {
             margin: 0 0 30px;
+            
         }
     }
 }
 
+// .reservations {
+//     background: $secondaryColor3;
+// }
+
 .reservations figure:nth-of-type(1) {
-    margin-right: 200px;
+    // float: left;
+    margin: 0 120px 0 0;
+    top: -50px;
+    // transform: translateY(-50px);
     img {
-        position: absolute;
-        top: -50px;
-        right: 0;
+        // transform: translateY(-50px);
+        // position: absolute;
+        // top: -5%;
+        // right: 0;
         box-shadow: $shadowRight;
     }
 }
 
 .reservations figure:nth-of-type(2) {
+    // float: right;
+    // width: calc(50% - 120px);
+    bottom: -50px;
+    margin: 0 0 0 120px;
+    // transform: translateY(50px);
     order: 4;
-    margin-left: 200px;
     img {
-        position: absolute;
-        bottom: -50px;
+        // transform: translateY(50px);
+        // position: absolute;
+        // bottom: -5%;
         box-shadow: $shadowLeft;
     }
 }
 
 .reservations .content:nth-of-type(1) {
+    // float: left;
+    // width: calc(50% - 120px);
+    // margin: 20px 0 20px 100px; 
     padding: 70px 40px 0 0;
     margin-bottom: 50px;
+    margin-left: 120px;
     h3 {
     @include headers(left, 1.17, 2.2px, white,3.4rem);
     }
 }
 
 .reservations .content:nth-of-type(2) {
-    margin-top: 50px;
+    // float: left;
+    // width: calc(50% - 120px);
+    // margin: 20px 100px 100px 0;
+    // padding-left: 20px;
+    margin-top: 20px;
+    margin-right: 120px;
     text-align: right;
     padding: 0 0 70px 40px;
     h3 {
@@ -172,6 +195,7 @@ header.main::after {
     padding: 130px 0;
     .wrapper {
         display: flex;
+        flex-wrap: wrap;
         figure {
             width: calc(30% - 60px);
             margin-right: 60px;

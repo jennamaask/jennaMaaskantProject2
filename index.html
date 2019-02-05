@@ -12,23 +12,27 @@
 <body>
     <!-- start of header -->
     <header class='main'>
-        <nav>
-            <ul>
-                <li class='current'><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li class='logo'><a href="">Bar One</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="title">
-            <h1>Bar-One</h1>
-            <h3>Place to be is</h3>
-        </title>
+        <div class="wrapper">
+            <nav>
+                <!-- <a class='logo' href="index.html">Bar One</a> -->
+                <i class="fas fa-bars"></i>
+                <ul>
+                    <li class='current'><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li class='logo'><a href="index.html">Bar One</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="title">
+                <h1>Bar-One</h1>
+                <h3>Place to be is</h3>
+            </title>
+        </div>
     </header>
     <!-- start of main -->
     <main>
-        <section class="about">
+        <section class="about" id='about'>
             <div class="wrapper">
                 <div class="container">
                     <div class="icon">
@@ -97,7 +101,7 @@
             </figure>
         </section>
         <section class="events">
-            <div class="wrapper">
+            <div class="wrapper clearfix">
                 <figure>
                     <img src="assets/eventsImage.jpg" alt="The hands of two women holding drinks in a bar and socializing.">
                 </figure>

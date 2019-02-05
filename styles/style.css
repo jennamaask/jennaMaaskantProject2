@@ -169,12 +169,17 @@ h3 {
   margin: 0; }
 
 .wrapper {
+  width: 80%;
   max-width: 1150px;
   margin: 0 auto; }
 
 img {
   display: block;
   width: 100%; }
+
+a.button:hover {
+  background: white;
+  color: #bf2603; }
 
 i.main {
   color: white;
@@ -289,36 +294,34 @@ header.main::after {
   flex-wrap: wrap;
   background: #220303; }
   .reservations figure {
-    width: calc(50% - 100px);
-    position: relative; }
+    position: relative;
+    width: calc(50% - 120px); }
   .reservations .content {
-    width: calc(50% - 100px); }
+    width: calc(50% - 120px); }
     .reservations .content p {
       margin: 0 0 30px; }
 
 .reservations figure:nth-of-type(1) {
-  margin-right: 200px; }
+  margin: 0 120px 0 0;
+  top: -50px; }
   .reservations figure:nth-of-type(1) img {
-    position: absolute;
-    top: -50px;
-    right: 0;
     -webkit-box-shadow: 20px 20px #ff8327;
     box-shadow: 20px 20px #ff8327; }
 
 .reservations figure:nth-of-type(2) {
+  bottom: -50px;
+  margin: 0 0 0 120px;
   -webkit-box-ordinal-group: 5;
   -ms-flex-order: 4;
-  order: 4;
-  margin-left: 200px; }
+  order: 4; }
   .reservations figure:nth-of-type(2) img {
-    position: absolute;
-    bottom: -50px;
     -webkit-box-shadow: -20px 20px #ff8327;
     box-shadow: -20px 20px #ff8327; }
 
 .reservations .content:nth-of-type(1) {
   padding: 70px 40px 0 0;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  margin-left: 120px; }
   .reservations .content:nth-of-type(1) h3 {
     font-family: "Chathura", sans-serif;
     font-weight: 700;
@@ -329,7 +332,8 @@ header.main::after {
     font-size: 3.4rem; }
 
 .reservations .content:nth-of-type(2) {
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-right: 120px;
   text-align: right;
   padding: 0 0 70px 40px; }
   .reservations .content:nth-of-type(2) h3 {
@@ -352,7 +356,10 @@ header.main::after {
   margin: 0;
   text-decoration: none;
   background: #bf2603;
-  padding: 5px 30px; }
+  padding: 5px 30px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
 
 .promotion {
   background: #111010;
@@ -369,7 +376,10 @@ header.main::after {
     margin: 0;
     text-decoration: none;
     background: #bf2603;
-    padding: 5px 40px; }
+    padding: 5px 40px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
   .promotion h3 {
     font-family: "Chathura", sans-serif;
     font-weight: 700;
@@ -387,7 +397,9 @@ header.main::after {
   .events .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
     .events .wrapper figure {
       width: calc(30% - 60px);
       margin-right: 60px;
@@ -414,7 +426,10 @@ header.main::after {
   margin: 0;
   text-decoration: none;
   background: #bf2603;
-  padding: 5px 45px; }
+  padding: 5px 45px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
 
 .events p {
   margin: 0 0 39px; }
@@ -475,6 +490,15 @@ nav li.logo a {
 nav .current a {
   color: #ff8327; }
 
+nav li a:hover {
+  color: #ff8327; }
+
+nav i {
+  display: none; }
+
+nav > a {
+  display: none; }
+
 footer {
   background: #505050;
   text-align: center;
@@ -532,7 +556,11 @@ header.contact {
       .contactContent .wrapper .contactForm form input {
         padding: 20px;
         border: none;
-        background: #220303; }
+        background: #220303;
+        color: white; }
+      .contactContent .wrapper .contactForm form input:focus, .contactContent .wrapper .contactForm form textarea:focus {
+        -webkit-box-shadow: 0 0 15px white;
+        box-shadow: 0 0 15px white; }
       .contactContent .wrapper .contactForm form input::-webkit-input-placeholder {
         color: white;
         opacity: 1; }
@@ -546,12 +574,14 @@ header.contact {
         color: white;
         opacity: 1; }
       .contactContent .wrapper .contactForm form input[type=text] {
-        width: 50%;
-        border-bottom: 2px solid white; }
+        width: calc(50% - 28px);
+        border-bottom: 2px solid white;
+        margin-right: 50px; }
       .contactContent .wrapper .contactForm form input[type=email] {
-        width: 49%;
+        width: calc(50% - 28px);
         border-bottom: 2px solid white; }
       .contactContent .wrapper .contactForm form textarea {
+        color: white;
         width: 100%;
         padding: 20px;
         border: 2px solid white;
@@ -579,6 +609,9 @@ header.contact {
         text-decoration: none;
         background: #bf2603;
         padding: 5px 0;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
         width: 100%; }
 
 header.blog {
@@ -611,7 +644,10 @@ main.blog {
   main.blog aside {
     width: 33.33%; }
   main.blog .primaryContent {
-    width: 66.66%; }
+    width: 66.66%;
+    -webkit-transform: translateY(-150px);
+    -ms-transform: translateY(-150px);
+    transform: translateY(-150px); }
 
 .asideWrapper {
   width: 70%;
@@ -621,11 +657,11 @@ main.blog {
   .asideWrapper p {
     margin: 0; }
   .asideWrapper .asideText {
-    padding-top: 270px; }
+    padding-top: 125%; }
   .asideWrapper figure {
     position: relative; }
     .asideWrapper figure img {
-      width: 125%;
+      width: 150%;
       position: absolute;
       right: 0;
       top: -60px; }
@@ -658,28 +694,47 @@ main.blog {
   left: 0;
   font-size: 4rem; }
 
-article figure {
-  position: relative; }
-
 article img {
   width: calc(100% - 20px);
   -webkit-box-shadow: -20px 20px #ff8327;
   box-shadow: -20px 20px #ff8327;
-  position: absolute;
-  right: 0;
-  top: -150px; }
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px); }
 
 article .articleText {
   border-left: 4px solid #ff8327;
   border-bottom: 4px solid #ff8327;
-  padding-top: 55%; }
+  padding: 75px 0 75px; }
   article .articleText p:nth-of-type(1) {
     color: #ff8327;
     margin-top: 0; }
 
 .blogWrapper {
-  width: 800px;
-  margin: 0 auto 75px; }
+  width: 75%;
+  margin: 0 auto; }
+
+.comments {
+  padding: 60px 0; }
+
+.commentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .commentContainer figure {
+    width: calc(15% - 20px);
+    margin: 10px 40px 0 0; }
+  .commentContainer .commentsText {
+    width: calc(85% - 20px); }
+    .commentContainer .commentsText .date {
+      margin: 0 0 10px;
+      color: #ff8327;
+      font-size: 2.2rem; }
+    .commentContainer .commentsText p {
+      margin: 0; }
+
+.commentContainer:nth-of-type(1) {
+  margin: 30px 0 100px; }
 
 .comments form {
   display: float;
@@ -692,7 +747,11 @@ article .articleText {
   .comments form input {
     padding: 20px;
     border: none;
-    background: #111010; }
+    background: #111010;
+    color: white; }
+  .comments form input:focus, .comments form textarea:focus {
+    -webkit-box-shadow: 0 0 15px #ff8327;
+    box-shadow: 0 0 15px #ff8327; }
   .comments form input::-webkit-input-placeholder {
     color: white;
     opacity: 1; }
@@ -706,12 +765,14 @@ article .articleText {
     color: white;
     opacity: 1; }
   .comments form input[type=text] {
-    width: 50%;
-    border-bottom: 2px solid #ff8327; }
+    width: calc(50% - 28px);
+    border-bottom: 2px solid #ff8327;
+    margin-right: 50px; }
   .comments form input[type=email] {
-    width: 49%;
+    width: calc(50% - 28px);
     border-bottom: 2px solid #ff8327; }
   .comments form textarea {
+    color: white;
     width: 100%;
     padding: 20px;
     border: 2px solid #ff8327;
@@ -739,4 +800,158 @@ article .articleText {
     text-decoration: none;
     background: #bf2603;
     padding: 5px 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
     width: 100%; }
+
+@media (max-width: 1362px) {
+  .reservations figure, .reservations .content {
+    width: calc(50% - 50px); }
+  .reservations figure:nth-of-type(1) {
+    margin-right: 50px; }
+  .reservations figure:nth-of-type(2) {
+    margin-left: 50px; }
+  .reservations .content:nth-of-type(1) {
+    margin-left: 50px; }
+  .reservations .content:nth-of-type(2) {
+    margin-right: 50px; } }
+
+@media (max-width: 1222px) {
+  .reservations figure {
+    width: calc(60% - 50px); }
+  .reservations .content {
+    width: calc(40% - 50px); } }
+
+@media (max-width: 1078px) {
+  .reservations {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .reservations figure {
+      width: calc(100% - 20px); }
+    .reservations .content {
+      width: 80%; }
+    .reservations .content:nth-of-type(1) {
+      margin: 0 auto;
+      padding: 30px 0 80px; }
+    .reservations .content:nth-of-type(2) {
+      margin: 0 auto;
+      padding: 80px 0; }
+    .reservations figure:nth-of-type(2) {
+      -webkit-box-ordinal-group: inherit;
+      -ms-flex-order: inherit;
+      order: inherit;
+      margin: 0 auto;
+      top: 0;
+      right: -10px; }
+    .reservations figure:nth-of-type(1) {
+      margin: 0; }
+  .promotion {
+    padding-top: 75px; }
+    .promotion .wrapper {
+      padding-bottom: 85px; }
+  .events {
+    padding: 60px 0; }
+    .events .wrapper figure {
+      width: calc(50% - 30px);
+      margin-right: 30px; }
+    .events .wrapper .content {
+      width: calc(50% - 30px);
+      margin-left: 30px; } }
+
+@media (max-width: 900px) {
+  .about .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .about .wrapper .container {
+      width: 100%; }
+      .about .wrapper .container .icon {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        width: 10%; }
+      .about .wrapper .container h3 {
+        width: 90%; }
+      .about .wrapper .container p {
+        padding: 0; }
+  .events .wrapper {
+    display: block; }
+    .events .wrapper figure {
+      float: left;
+      margin: 0 40px 40px 0; }
+    .events .wrapper .content {
+      margin: 30px 0 0;
+      width: 100%; } }
+
+@media (max-width: 768px) {
+  .about .wrapper .container h3 {
+    width: 85%; }
+  .about .wrapper .container .icon {
+    width: 15%; }
+  .promotion .wrapper {
+    padding: 0 0 85px; }
+  .gallery .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .gallery figure:nth-child(1) {
+    margin: 0 0 20px; }
+  .gallery figure:nth-child(2) {
+    margin: 20px 0; }
+  .gallery figure:nth-child(3) {
+    margin: 20px 0 0 0; }
+  header .wrapper {
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    header .wrapper h2 {
+      margin: 0;
+      width: 90%; }
+    header .wrapper .title {
+      margin-top: 100px;
+      margin: 0; }
+    header .wrapper h1 {
+      font-size: 10rem; }
+    header .wrapper h3 {
+      left: 55px; }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 10%;
+    padding-top: 40px; }
+  nav > a {
+    display: block;
+    width: 10%;
+    font-family: "Tulpen One", cursive;
+    text-align: center;
+    letter-spacing: 1.9px;
+    font-size: 2.8rem;
+    color: white;
+    margin: 0;
+    padding: 0; }
+  nav i {
+    display: block;
+    color: white;
+    font-size: 1.5rem; }
+  nav ul {
+    display: none; } }
