@@ -9,7 +9,6 @@ header.home {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
 }
 
 header.home .wrapper {
@@ -148,7 +147,7 @@ i.home {
     padding-right: calc((50% - 120px) - 505px);
     margin-left: 120px;
     h3 {
-    @include headers(left, 1.17, 0.032em, $secondaryColor4, 3.4rem);
+        @include headers(left, 1.17, 0.032em, $secondaryColor4, 3.4rem);
     }
 }
 

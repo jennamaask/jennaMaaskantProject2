@@ -193,8 +193,7 @@ header.home {
   flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  position: relative; }
+  justify-content: space-between; }
 
 header.home .wrapper {
   height: 80vh;
