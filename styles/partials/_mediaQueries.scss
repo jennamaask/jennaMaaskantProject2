@@ -1,48 +1,34 @@
+// styles for a width of 1250px and under
 @media (max-width: 1250px) {
-    // .reservations {
-    //     figure {
-    //         width: calc(60% - 50px);
-    //     }
-    //     .content {
-    //         width: calc(40% - 50px);
-    //     }
-    // }
+
+    // general styles
     .wrapper {
         width: 80%;
     }
 
-    .reservations .reservationsImageLeft {
+    // home page styles
+    .reservations > * {
+        width: calc(50% - 50px);
+    }
+    .reservationsImageLeft {
         margin-right: 50px;
-        width: calc(50% - 50px);
     }
 
-    .reservations .reservationsImageRight{
+    .reservationsImageRight{
         margin-left: 50px;
-        width: calc(50% - 50px);
     }
 
-    .reservations .content:nth-of-type(2){
+    .contentRight{
         padding-right: calc((50% - 50px) * 0.2);
         margin-left: 50px;
-        width: calc(50% - 50px);
     }
 
-    .reservations .content:nth-of-type(4){
+    .contentLeft{
         padding-left: calc((50% - 50px) * 0.2);
         margin-right: 50px;
-        width: calc(50% - 50px);
     }
 
-    .contactContent .wrapper .contactForm form {
-        input[type=text] {
-            width: 100%;
-            margin: 0;
-        }
-        input[type=email] {
-            width: 100%;
-        }
-    }
-
+    // blog page styles
     main.blog {
         flex-direction: column;
         aside {
@@ -56,6 +42,11 @@
                 border-right: 4px solid $secondaryColor1;
             }
         }
+    }
+
+    article img {
+        width: 100%;
+        left: 20px;
     }
 
     .asideWrapper {
@@ -78,40 +69,52 @@
         }
     }
 
-
+    // contact page styles
+    .contactContent .wrapper .contactForm form {
+        input[type=text] {
+            width: 100%;
+            margin: 0;
+        }
+        input[type=email] {
+            width: 100%;
+        }
+    }
 }
 
+// styles for a width of 1050px and below
 @media (max-width: 1050px) {
+
+    // home page styles
     .reservations {
         flex-direction: column;
-        .content:nth-of-type(2){
-            margin: 0 auto;
+        .reservationsImage {
+            margin: 0;
+            width: calc(100% - 20px);
+        }
+        .content {
             width: 80%;
+            margin: 0 auto;
+        }
+        .contentRight{
             padding: 30px 0 80px;
         }
-        .content:nth-of-type(4) {
-            margin: 0 auto;
-            width: 80%;
+        .contentLeft{
             padding: 80px 0;
         }
         .reservationsImageRight{
             order: inherit;
-            margin: 0 auto;
             top: 0;
-            right: -10px;
-            width: calc(100% - 20px);
-        }
-        .reservationsImageLeft {
-            margin: 0;
-            width: calc(100% - 20px);
+            left: 20px;
         }
     }
+
     .promotion {
         padding-top: 75px;
         .wrapper {
             padding-bottom: 85px;
         }
     }
+
     .events {    
         padding: 60px 0;
         .wrapper {
@@ -127,7 +130,10 @@
     }
 }
 
+// styles for a width of 900px and below
 @media (max-width: 900px) {
+
+    // home page styles
     .about .wrapper{
         flex-direction: column;
         .container {
@@ -144,6 +150,7 @@
             }
         }
     }
+
     .events .wrapper {
         display: block;
         .eventsImage {
@@ -155,16 +162,14 @@
             width: 100%;
         }
     }
+
+    // contact page styles
     .contactContent {
         padding: 0 0 70px;
             .wrapper {
                 flex-direction: column;
                 .contactForm {
                     width: 100%;
-                    form {
-                        position: relative;
-                        top: -80px;
-                    }
                 }
                 .info {
                     width: 100%;
@@ -172,6 +177,13 @@
                 }
             }
     }
+
+    .contactContent form {
+        position: relative;
+        top: -80px;
+    }
+
+    // blog page styles
     .asideWrapper {
         flex-direction: column;
         .asideImage, .asideText {
@@ -180,6 +192,11 @@
             padding: 0;
         }
     }
+
+    main.blog .primaryContent .articleText {
+        padding: 55% 0 30px;
+    }
+
     .comments form {
         input[type=text] {
             width: 100%;
@@ -189,27 +206,31 @@
             width: 100%;
         }
     }
+
     .commentContainer .userImage {
         margin-right: 10px;
         width: calc(30% - 10px);
     }
+
     .commentContainer .commentsText {
         width: calc(70% - 10px);
     }
-    main.blog .primaryContent .articleText {
-        padding: 45% 0 30px;
-    }
 }
 
+// styles for a width of 768px and below
 @media (max-width: 768px) {
+
+    // home page styles
     h1 {
         font-size: 9rem;
     }
+
     header.home h3 {
         width: 100%;
         bottom: -30px;
         padding-right: 95px;
     }
+
     .title {
         width: 100%;
     }
@@ -222,6 +243,7 @@
             width: 15%;
         }
     }
+
     .promotion .wrapper {
         padding: 0 0 85px;
     }
@@ -229,19 +251,28 @@
     .promotion h3 {
         line-height: .75;
     }
+
     .gallery .wrapper {
         flex-direction: column;
     }
+
     .gallery li:nth-child(1) {
         margin: 0 0 20px
     }
+
     .gallery li:nth-child(2) {
         margin: 20px 0;
     }
+
     .gallery li:nth-child(3) {
         margin: 20px 0 0 0;
     }
 
+    .headerImage {
+        display: none;
+    }
+    
+    // drop down menu styles
     nav {
         width: 100%;
         padding-top: 40px;
@@ -250,7 +281,7 @@
 
     .menu i.fa-bars {
         display: block;
-        color: white;
+        color: $secondaryColor4;
         font-size: 1.5rem;
         cursor: pointer;
         transition: color .3s;
@@ -260,15 +291,10 @@
         color: $secondaryColor1;
     }
 
-    .menu {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-    }
-
+    // this code was influenced by the "advanced selectors" code along from the part-time Web Development course
     nav.dropDown {
         display: block;
-        background: rgba(0, 0, 0, .9);
+        background: $primaryColor;
         list-style: none;
         padding: 0;
         position: fixed;
@@ -291,17 +317,14 @@
         }
     }
 
-    nav.mainMenu {
-        background: black;
-    }
-
     input[type="checkbox"]:checked + .dropDown {
-        top: 0;
+        top: 20px;
     }
 
     input[type="checkbox"]:checked ~ header label.menu i.fa-bars {
         display: none;
     }
+
     input[type="checkbox"]:checked ~ header label.menu i.fa-times {
         display: block;
         font-size: 1.5rem;
@@ -313,13 +336,19 @@
         color: $secondaryColor1;
     }
  
-    label.menu {
+    .hamburger {
         display: block;
+        background: $primaryColor;
         position: fixed;
-        top: 20px;
-        left: 20px;
-        color: white;
+        width: 100%;
+        padding: 10px 10%;
+        top: 0;
+        left: 0;
+        color: $secondaryColor4;
         z-index: 40;
+        label.menu {
+            display: block;
+        }
     }
 
     .menu i.fa-times {
@@ -330,38 +359,24 @@
         display: none;
     }
 
-    .headerImage {
-        display: none;
-    }
 }
 
+// styles for a width of 414px and under
 @media (max-width: 414px) {
+
+    // drop down menu styles
+    .hamburger {
+        padding: 20px 5%;
+    }
+
+    // home page styles
     h1 {
         font-size: 8rem;
         text-align: center;
     }
+
     header.home h3 {
         padding-right: 65px;
-    }
-    main.blog .primaryContent .articleText {
-        padding-top: 30%;
-    }
-    main.blog .primaryContent, .blogWrapper, .wrapper {
-        width: 95%;
-    }
-    .comments form, .contactContent .wrapper .contactForm form {
-        padding: 10px;
-    }
-    main.blog aside {
-        padding-bottom: 30px;
-    }
-
-    .asideWrapper {
-        width: 95%;
-        padding: 20px 0;
-        .asideText {
-            width: 95%;
-        }
     }
 
     .events .wrapper .eventsImage {
@@ -370,18 +385,49 @@
         margin: 0 0 0 20px;
     }
 
-    p, .asideWrapper li, article .articleText p:nth-of-type(1), .asideWrapper a {
-       font-size: 1.7rem;
+    // blog page styles
+    main.blog .primaryContent .articleText {
+        padding-top: 40%;
+    }
+
+    main.blog .primaryContent, .blogWrapper, .wrapper {
+        width: 95%;
+    }
+
+    article img {
+        left: 0;
+        box-shadow: none;
+        border: 4px solid $secondaryColor1;
     }
     
     .commentContainer .commentsText .date {
        font-size: 1.9rem;
     }
 
-    .about h3, .reservations .content:nth-of-type(1) h3, .reservations .content:nth-of-type(2) h3, .promotion h3, .events h3, main.blog h3, main.blog h3 {
+    
+    main.blog aside {
+        padding-bottom: 30px;
+    }
+    
+    .asideWrapper {
+        width: 95%;
+        padding: 20px 0;
+        .asideText {
+            width: 95%;
+        }
+    }
+    
+    // form styles
+    .comments form, .contactForm form {
+        padding: 10px;
+    }
+
+    // text sizing styles
+    p, .asideWrapper li, article .articleText p:nth-of-type(1), .asideWrapper a {
+       font-size: 1.7rem;
+    }
+
+    .about h3, .contentRight h3, .contentLeft h3, .promotion h3, .events h3, main.blog h3 {
         font-size: 3rem;
     }
 }
-
-
-

@@ -1,7 +1,12 @@
+
+// contact page styles
+
+// header styles
 header.contact {
-@include secondaryHeader(url(../assets/contactHeader.jpg));
+    @include secondaryHeader(url(../assets/contactHeader.jpg));
 }
 
+// main section styles
 .contactContent {
     background: $primaryColor;
     padding: 110px 0 180px;
@@ -12,8 +17,9 @@ header.contact {
         margin: 20px 0 40px;
     }
 }
+
 .social i {
-    color: white;
+    color: $secondaryColor4;
     padding: 8px;
 }
 
@@ -26,13 +32,14 @@ header.contact {
     .contactForm {
         width: 66.66%;
         position: relative;
-        form{
-            @include formStyle($secondaryColor3, white);
-            box-shadow: $shadowRight;
-            position: absolute;
-            top: -250px;
-        }
     }
+}
+
+.contactContent form {
+    @include formStyle($secondaryColor3, $secondaryColor4);
+    box-shadow: $shadowRight;
+    position: absolute;
+    top: -250px;
 }
 
 

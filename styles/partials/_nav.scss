@@ -1,3 +1,5 @@
+
+// navigation styles
 nav ul {
     list-style: none;
     display: flex;
@@ -9,14 +11,14 @@ nav ul {
 nav a {
     text-decoration: none;
     padding: 0 25px;
-    @include headers(center, 29px, 0.05em, white, 1.9rem)
+    @include headers(center, 29px, 0.05em, $secondaryColor4, 1.9rem)
 }
 
 nav li.logo a {
-    @include logo(.034em, 2.8rem, white);
+    @include logo(.034em, 2.8rem, $secondaryColor4);
 }
 
-nav .current a{
+nav .current a {
     color: $secondaryColor1;
 }
 

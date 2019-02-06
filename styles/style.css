@@ -154,7 +154,7 @@ p {
   font-size: 1.95rem;
   line-height: .78;
   letter-spacing: .049em;
-  color: white;
+  color: #fff;
   text-decoration: none; }
 
 h1 {
@@ -177,35 +177,8 @@ img {
   width: 100%; }
 
 a.button:hover {
-  background: white;
+  background: #fff;
   color: #bf2603; }
-
-i.home {
-  color: white;
-  background: #bf2603;
-  border-radius: 50%;
-  padding: 10px;
-  font-size: 1.2rem; }
-
-.container:nth-of-type(1) i {
-  padding: 11.5px 10px; }
-
-.container:nth-of-type(2) i {
-  padding: 13px 10px; }
-
-.container:nth-of-type(3) i {
-  padding: 10px 13px; }
-
-.icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
 
 header.home {
   background: url(../assets/homeHeader.jpg);
@@ -248,7 +221,7 @@ header.home h3 {
   text-align: center;
   line-height: 1.15;
   letter-spacing: 0.0325em;
-  color: white;
+  color: #fff;
   font-size: 4rem;
   position: absolute;
   bottom: -20px;
@@ -261,6 +234,33 @@ header.home h3 {
   z-index: 10;
   margin-bottom: 50px; }
 
+i.home {
+  color: #fff;
+  background: #bf2603;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.2rem; }
+
+.container:nth-of-type(1) i {
+  padding: 11.5px 10px; }
+
+.container:nth-of-type(2) i {
+  padding: 13px 10px; }
+
+.container:nth-of-type(3) i {
+  padding: 10px 13px; }
+
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 .about {
   background: #111010;
   padding: 200px 0 75px; }
@@ -271,7 +271,7 @@ header.home h3 {
   text-align: left;
   line-height: 1.17;
   letter-spacing: 0.032em;
-  color: white;
+  color: #fff;
   font-size: 3.4rem; }
 
 .about .wrapper {
@@ -306,10 +306,8 @@ header.home h3 {
   flex-wrap: wrap;
   background: #220303; }
   .reservations .reservationsImage {
-    position: relative;
-    width: calc(50% - 120px); }
+    position: relative; }
   .reservations .content {
-    width: calc(50% - 120px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -322,6 +320,9 @@ header.home h3 {
     justify-content: center; }
     .reservations .content p {
       margin: 0 0 30px; }
+
+.reservations > * {
+  width: calc(50% - 120px); }
 
 .reservationsImageLeft {
   margin: 0 120px 0 0;
@@ -340,32 +341,35 @@ header.home h3 {
     -webkit-box-shadow: -20px 20px #ff8327;
     box-shadow: -20px 20px #ff8327; }
 
-.reservations .content:nth-of-type(2) {
-  width: calc(50% - 120px);
-  padding-right: calc((50% - 120px) - 500px);
+.contentRight {
+  /* in order to keep the text of the content sections in-line with the wrapper of of the other sections, I followed these steps:
+    1) calculated width of half the wrapper: 625px
+    2) substracted the inside margin value of 120px, which equals 505px
+    3) To calculate the outside padding value(in this case the padding-right) I calculated the width of the .content div, expressed in terms of it's parent (50% - 120px) and then substracted 505px */
+  padding-right: calc((50% - 120px) - 505px);
   margin-left: 120px; }
-  .reservations .content:nth-of-type(2) h3 {
+  .contentRight h3 {
     font-family: "Chathura", sans-serif;
     font-weight: 700;
     text-align: left;
     line-height: 1.17;
     letter-spacing: 0.032em;
-    color: white;
+    color: #fff;
     font-size: 3.4rem; }
 
-.reservations .content:nth-of-type(4) {
+.contentLeft {
   margin-right: 120px;
   padding-bottom: 50px;
   padding-left: calc((50% - 120px) - 505px); }
-  .reservations .content:nth-of-type(4) h3 {
+  .contentLeft h3 {
     font-family: "Chathura", sans-serif;
     font-weight: 700;
     text-align: right;
     line-height: 1.17;
     letter-spacing: 0.032em;
-    color: white;
+    color: #fff;
     font-size: 3.4rem; }
-  .reservations .content:nth-of-type(4) .button {
+  .contentLeft .button {
     -ms-flex-item-align: end;
     align-self: flex-end; }
 
@@ -374,7 +378,7 @@ header.home h3 {
   text-align: center;
   letter-spacing: 0.078em;
   font-size: 1.6rem;
-  color: white;
+  color: #fff;
   margin: 0;
   text-decoration: none;
   background: #bf2603;
@@ -395,7 +399,7 @@ header.home h3 {
     text-align: center;
     letter-spacing: 0.078em;
     font-size: 1.6rem;
-    color: white;
+    color: #fff;
     margin: 0;
     text-decoration: none;
     background: #bf2603;
@@ -445,7 +449,7 @@ header.home h3 {
   text-align: center;
   letter-spacing: 0.078em;
   font-size: 1.6rem;
-  color: white;
+  color: #fff;
   margin: 0;
   text-decoration: none;
   background: #bf2603;
@@ -499,7 +503,7 @@ nav a {
   text-align: center;
   line-height: 29px;
   letter-spacing: 0.05em;
-  color: white;
+  color: #fff;
   font-size: 1.9rem; }
 
 nav li.logo a {
@@ -507,7 +511,7 @@ nav li.logo a {
   text-align: center;
   letter-spacing: 0.034em;
   font-size: 2.8rem;
-  color: white;
+  color: #fff;
   margin: 0; }
 
 nav .current a {
@@ -528,7 +532,7 @@ nav.dropDown {
 footer {
   background: #505050;
   text-align: center;
-  padding: 5px; }
+  padding: 17px 0; }
   footer p {
     margin: 0; }
 
@@ -543,7 +547,7 @@ header.contact {
     text-align: left;
     line-height: 1.14;
     letter-spacing: 0.0311em;
-    color: white;
+    color: #fff;
     font-size: 4.18rem; }
 
 .contactContent {
@@ -555,7 +559,7 @@ header.contact {
     margin: 20px 0 40px; }
 
 .social i {
-  color: white;
+  color: #fff;
   padding: 8px; }
 
 .contactContent .wrapper {
@@ -571,78 +575,79 @@ header.contact {
   .contactContent .wrapper .contactForm {
     width: 66.66%;
     position: relative; }
-    .contactContent .wrapper .contactForm form {
-      display: float;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      font-family: "Chathura", sans-serif;
-      font-size: 1.6rem;
-      background: #220303;
-      padding: 30px 70px 50px;
-      -webkit-box-shadow: 20px 20px #ff8327;
-      box-shadow: 20px 20px #ff8327;
-      position: absolute;
-      top: -250px; }
-      .contactContent .wrapper .contactForm form input {
-        padding: 20px;
-        border: none;
-        background: #220303;
-        color: white; }
-      .contactContent .wrapper .contactForm form input:focus, .contactContent .wrapper .contactForm form textarea:focus {
-        -webkit-box-shadow: 0 0 15px white;
-        box-shadow: 0 0 15px white; }
-      .contactContent .wrapper .contactForm form input::-webkit-input-placeholder {
-        color: white;
-        opacity: 1; }
-      .contactContent .wrapper .contactForm form input:-ms-input-placeholder {
-        color: white;
-        opacity: 1; }
-      .contactContent .wrapper .contactForm form input::-ms-input-placeholder {
-        color: white;
-        opacity: 1; }
-      .contactContent .wrapper .contactForm form input::placeholder {
-        color: white;
-        opacity: 1; }
-      .contactContent .wrapper .contactForm form input[type=text] {
-        width: calc(50% - 28px);
-        border-bottom: 2px solid white;
-        margin-right: 50px; }
-      .contactContent .wrapper .contactForm form input[type=email] {
-        width: calc(50% - 28px);
-        border-bottom: 2px solid white; }
-      .contactContent .wrapper .contactForm form textarea {
-        color: white;
-        width: 100%;
-        padding: 20px;
-        border: 2px solid white;
-        background: #220303;
-        margin: 50px 0; }
-      .contactContent .wrapper .contactForm form textarea::-webkit-input-placeholder {
-        color: white;
-        opacity: 1; }
-      .contactContent .wrapper .contactForm form textarea:-ms-input-placeholder {
-        color: white;
-        opacity: 1; }
-      .contactContent .wrapper .contactForm form textarea::-ms-input-placeholder {
-        color: white;
-        opacity: 1; }
-      .contactContent .wrapper .contactForm form textarea::placeholder {
-        color: white;
-        opacity: 1; }
-      .contactContent .wrapper .contactForm form .button {
-        font-family: "Tulpen One", cursive;
-        text-align: center;
-        letter-spacing: 0.078em;
-        font-size: 1.6rem;
-        color: white;
-        margin: 0;
-        text-decoration: none;
-        background: #bf2603;
-        padding: 5px 0;
-        -webkit-transition: all .3s;
-        -o-transition: all .3s;
-        transition: all .3s;
-        width: 100%; }
+
+.contactContent form {
+  display: float;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-family: "Chathura", sans-serif;
+  font-size: 1.6rem;
+  background: #220303;
+  padding: 30px 70px 50px;
+  -webkit-box-shadow: 20px 20px #ff8327;
+  box-shadow: 20px 20px #ff8327;
+  position: absolute;
+  top: -250px; }
+  .contactContent form input {
+    padding: 20px;
+    border: none;
+    background: #220303;
+    color: #fff; }
+  .contactContent form input:focus, .contactContent form textarea:focus {
+    -webkit-box-shadow: 0 0 15px #fff;
+    box-shadow: 0 0 15px #fff; }
+  .contactContent form input::-webkit-input-placeholder {
+    color: #fff;
+    opacity: 1; }
+  .contactContent form input:-ms-input-placeholder {
+    color: #fff;
+    opacity: 1; }
+  .contactContent form input::-ms-input-placeholder {
+    color: #fff;
+    opacity: 1; }
+  .contactContent form input::placeholder {
+    color: #fff;
+    opacity: 1; }
+  .contactContent form input[type=text] {
+    width: calc(50% - 28px);
+    border-bottom: 2px solid #fff;
+    margin-right: 50px; }
+  .contactContent form input[type=email] {
+    width: calc(50% - 28px);
+    border-bottom: 2px solid #fff; }
+  .contactContent form textarea {
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #fff;
+    background: #220303;
+    margin: 50px 0; }
+  .contactContent form textarea::-webkit-input-placeholder {
+    color: #fff;
+    opacity: 1; }
+  .contactContent form textarea:-ms-input-placeholder {
+    color: #fff;
+    opacity: 1; }
+  .contactContent form textarea::-ms-input-placeholder {
+    color: #fff;
+    opacity: 1; }
+  .contactContent form textarea::placeholder {
+    color: #fff;
+    opacity: 1; }
+  .contactContent form .button {
+    font-family: "Tulpen One", cursive;
+    text-align: center;
+    letter-spacing: 0.078em;
+    font-size: 1.6rem;
+    color: #fff;
+    margin: 0;
+    text-decoration: none;
+    background: #bf2603;
+    padding: 5px 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    width: 100%; }
 
 header.blog {
   background: url(../assets/blogHeader.jpg);
@@ -655,11 +660,8 @@ header.blog {
     text-align: left;
     line-height: 1.14;
     letter-spacing: 0.0311em;
-    color: white;
+    color: #fff;
     font-size: 4.18rem; }
-
-header.blog h2 {
-  margin-bottom: 80px; }
 
 main.blog {
   display: -webkit-box;
@@ -676,57 +678,12 @@ main.blog {
     text-align: left;
     line-height: 1.17;
     letter-spacing: 0.032em;
-    color: white;
+    color: #fff;
     font-size: 3.4rem; }
   main.blog aside {
     width: 33.33%; }
   main.blog .primaryContent {
     width: 66.66%; }
-
-.asideWrapper {
-  width: 70%;
-  margin: 100px auto 0;
-  background: #220303;
-  padding: 30px; }
-  .asideWrapper p {
-    margin: 0; }
-  .asideWrapper .asideText {
-    padding-top: 125%; }
-  .asideWrapper .asideImage {
-    position: relative; }
-    .asideWrapper .asideImage img {
-      width: 150%;
-      position: absolute;
-      right: 0;
-      top: -60px; }
-  .asideWrapper a {
-    font-family: "Chathura", sans-serif;
-    font-size: 1.95rem;
-    line-height: .78;
-    letter-spacing: .049em;
-    color: #ff8327;
-    text-decoration: none; }
-  .asideWrapper ul {
-    padding: 0;
-    margin: 0; }
-  .asideWrapper li {
-    font-family: "Chathura", sans-serif;
-    font-size: 1.95rem;
-    line-height: .78;
-    letter-spacing: .049em;
-    color: white;
-    text-decoration: none;
-    list-style: none;
-    position: relative;
-    padding-left: 40px; }
-
-.asideWrapper li::before {
-  color: #bf2603;
-  content: "∙";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  font-size: 4rem; }
 
 article .blogImage {
   position: relative; }
@@ -737,12 +694,12 @@ article img {
   box-shadow: -20px 20px #ff8327;
   position: absolute;
   right: 0;
-  top: -150px; }
+  top: -120px; }
 
 article .articleText {
   border-left: 4px solid #ff8327;
   border-bottom: 4px solid #ff8327;
-  padding: 55% 0 75px; }
+  padding: 60% 0 75px; }
   article .articleText p:nth-of-type(1) {
     font-family: "Chathura", sans-serif;
     font-size: 1.95rem;
@@ -795,21 +752,21 @@ article .articleText {
     padding: 20px;
     border: none;
     background: #111010;
-    color: white; }
+    color: #fff; }
   .comments form input:focus, .comments form textarea:focus {
     -webkit-box-shadow: 0 0 15px #ff8327;
     box-shadow: 0 0 15px #ff8327; }
   .comments form input::-webkit-input-placeholder {
-    color: white;
+    color: #fff;
     opacity: 1; }
   .comments form input:-ms-input-placeholder {
-    color: white;
+    color: #fff;
     opacity: 1; }
   .comments form input::-ms-input-placeholder {
-    color: white;
+    color: #fff;
     opacity: 1; }
   .comments form input::placeholder {
-    color: white;
+    color: #fff;
     opacity: 1; }
   .comments form input[type=text] {
     width: calc(50% - 28px);
@@ -819,30 +776,30 @@ article .articleText {
     width: calc(50% - 28px);
     border-bottom: 2px solid #ff8327; }
   .comments form textarea {
-    color: white;
+    color: #fff;
     width: 100%;
     padding: 20px;
     border: 2px solid #ff8327;
     background: #111010;
     margin: 50px 0; }
   .comments form textarea::-webkit-input-placeholder {
-    color: white;
+    color: #fff;
     opacity: 1; }
   .comments form textarea:-ms-input-placeholder {
-    color: white;
+    color: #fff;
     opacity: 1; }
   .comments form textarea::-ms-input-placeholder {
-    color: white;
+    color: #fff;
     opacity: 1; }
   .comments form textarea::placeholder {
-    color: white;
+    color: #fff;
     opacity: 1; }
   .comments form .button {
     font-family: "Tulpen One", cursive;
     text-align: center;
     letter-spacing: 0.078em;
     font-size: 1.6rem;
-    color: white;
+    color: #fff;
     margin: 0;
     text-decoration: none;
     background: #bf2603;
@@ -852,28 +809,66 @@ article .articleText {
     transition: all .3s;
     width: 100%; }
 
+.asideWrapper {
+  width: 70%;
+  margin: 100px auto 0;
+  background: #220303;
+  padding: 30px; }
+  .asideWrapper p {
+    margin: 0; }
+  .asideWrapper .asideText {
+    padding-top: 125%; }
+  .asideWrapper .asideImage {
+    position: relative; }
+    .asideWrapper .asideImage img {
+      width: 150%;
+      position: absolute;
+      right: 0;
+      top: -60px; }
+  .asideWrapper a {
+    font-family: "Chathura", sans-serif;
+    font-size: 1.95rem;
+    line-height: .78;
+    letter-spacing: .049em;
+    color: #ff8327;
+    text-decoration: none; }
+  .asideWrapper ul {
+    padding: 0;
+    margin: 0; }
+  .asideWrapper li {
+    font-family: "Chathura", sans-serif;
+    font-size: 1.95rem;
+    line-height: .78;
+    letter-spacing: .049em;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+    padding-left: 40px; }
+
+.asideWrapper li::before {
+  color: #bf2603;
+  content: "∙";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 4rem; }
+
 @media (max-width: 1250px) {
   .wrapper {
     width: 80%; }
-  .reservations .reservationsImageLeft {
-    margin-right: 50px;
+  .reservations > * {
     width: calc(50% - 50px); }
-  .reservations .reservationsImageRight {
-    margin-left: 50px;
-    width: calc(50% - 50px); }
-  .reservations .content:nth-of-type(2) {
+  .reservationsImageLeft {
+    margin-right: 50px; }
+  .reservationsImageRight {
+    margin-left: 50px; }
+  .contentRight {
     padding-right: calc((50% - 50px) * 0.2);
-    margin-left: 50px;
-    width: calc(50% - 50px); }
-  .reservations .content:nth-of-type(4) {
+    margin-left: 50px; }
+  .contentLeft {
     padding-left: calc((50% - 50px) * 0.2);
-    margin-right: 50px;
-    width: calc(50% - 50px); }
-  .contactContent .wrapper .contactForm form input[type=text] {
-    width: 100%;
-    margin: 0; }
-  .contactContent .wrapper .contactForm form input[type=email] {
-    width: 100%; }
+    margin-right: 50px; }
   main.blog {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -887,6 +882,9 @@ article .articleText {
       margin: 0 auto; }
       main.blog .primaryContent .articleText {
         border-right: 4px solid #ff8327; }
+  article img {
+    width: 100%;
+    left: 20px; }
   .asideWrapper {
     width: 80%;
     margin-top: 0;
@@ -907,7 +905,12 @@ article .articleText {
         top: 0; }
     .asideWrapper .asideText {
       padding: 0 0 0 40px;
-      width: 60%; } }
+      width: 60%; }
+  .contactContent .wrapper .contactForm form input[type=text] {
+    width: 100%;
+    margin: 0; }
+  .contactContent .wrapper .contactForm form input[type=email] {
+    width: 100%; } }
 
 @media (max-width: 1050px) {
   .reservations {
@@ -915,25 +918,22 @@ article .articleText {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .reservations .content:nth-of-type(2) {
-      margin: 0 auto;
+    .reservations .reservationsImage {
+      margin: 0;
+      width: calc(100% - 20px); }
+    .reservations .content {
       width: 80%;
+      margin: 0 auto; }
+    .reservations .contentRight {
       padding: 30px 0 80px; }
-    .reservations .content:nth-of-type(4) {
-      margin: 0 auto;
-      width: 80%;
+    .reservations .contentLeft {
       padding: 80px 0; }
     .reservations .reservationsImageRight {
       -webkit-box-ordinal-group: inherit;
       -ms-flex-order: inherit;
       order: inherit;
-      margin: 0 auto;
       top: 0;
-      right: -10px;
-      width: calc(100% - 20px); }
-    .reservations .reservationsImageLeft {
-      margin: 0;
-      width: calc(100% - 20px); }
+      left: 20px; }
   .promotion {
     padding-top: 75px; }
     .promotion .wrapper {
@@ -981,12 +981,12 @@ article .articleText {
       flex-direction: column; }
       .contactContent .wrapper .contactForm {
         width: 100%; }
-        .contactContent .wrapper .contactForm form {
-          position: relative;
-          top: -80px; }
       .contactContent .wrapper .info {
         width: 100%;
         text-align: center; }
+  .contactContent form {
+    position: relative;
+    top: -80px; }
   .asideWrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -996,6 +996,8 @@ article .articleText {
       width: 80%;
       margin: 0 auto;
       padding: 0; }
+  main.blog .primaryContent .articleText {
+    padding: 55% 0 30px; }
   .comments form input[type=text] {
     width: 100%;
     margin: 0; }
@@ -1005,9 +1007,7 @@ article .articleText {
     margin-right: 10px;
     width: calc(30% - 10px); }
   .commentContainer .commentsText {
-    width: calc(70% - 10px); }
-  main.blog .primaryContent .articleText {
-    padding: 45% 0 30px; } }
+    width: calc(70% - 10px); } }
 
 @media (max-width: 768px) {
   h1 {
@@ -1037,13 +1037,15 @@ article .articleText {
     margin: 20px 0; }
   .gallery li:nth-child(3) {
     margin: 20px 0 0 0; }
+  .headerImage {
+    display: none; }
   nav {
     width: 100%;
     padding-top: 40px;
     position: relative; }
   .menu i.fa-bars {
     display: block;
-    color: white;
+    color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
     -webkit-transition: color .3s;
@@ -1051,13 +1053,9 @@ article .articleText {
     transition: color .3s; }
   .menu i.fa-bars:hover {
     color: #ff8327; }
-  .menu {
-    position: fixed;
-    top: 10px;
-    left: 10px; }
   nav.dropDown {
     display: block;
-    background: rgba(0, 0, 0, 0.9);
+    background: #111010;
     list-style: none;
     padding: 0;
     position: fixed;
@@ -1086,10 +1084,8 @@ article .articleText {
       height: 100vh; }
       nav.dropDown ul a {
         font-size: 4rem; }
-  nav.mainMenu {
-    background: black; }
   input[type="checkbox"]:checked + .dropDown {
-    top: 0; }
+    top: 20px; }
   input[type="checkbox"]:checked ~ header label.menu i.fa-bars {
     display: none; }
   input[type="checkbox"]:checked ~ header label.menu i.fa-times {
@@ -1101,32 +1097,46 @@ article .articleText {
     transition: color 0.3s; }
   i.fa-times:hover {
     color: #ff8327; }
-  label.menu {
+  .hamburger {
     display: block;
+    background: #111010;
     position: fixed;
-    top: 20px;
-    left: 20px;
-    color: white;
+    width: 100%;
+    padding: 10px 10%;
+    top: 0;
+    left: 0;
+    color: #fff;
     z-index: 40; }
+    .hamburger label.menu {
+      display: block; }
   .menu i.fa-times {
     display: none; }
   nav.mainMenu ul {
-    display: none; }
-  .headerImage {
     display: none; } }
 
 @media (max-width: 414px) {
+  .hamburger {
+    padding: 20px 5%; }
   h1 {
     font-size: 8rem;
     text-align: center; }
   header.home h3 {
     padding-right: 65px; }
+  .events .wrapper .eventsImage {
+    float: none;
+    width: calc(100% - 20px);
+    margin: 0 0 0 20px; }
   main.blog .primaryContent .articleText {
-    padding-top: 30%; }
+    padding-top: 40%; }
   main.blog .primaryContent, .blogWrapper, .wrapper {
     width: 95%; }
-  .comments form, .contactContent .wrapper .contactForm form {
-    padding: 10px; }
+  article img {
+    left: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 4px solid #ff8327; }
+  .commentContainer .commentsText .date {
+    font-size: 1.9rem; }
   main.blog aside {
     padding-bottom: 30px; }
   .asideWrapper {
@@ -1134,13 +1144,9 @@ article .articleText {
     padding: 20px 0; }
     .asideWrapper .asideText {
       width: 95%; }
-  .events .wrapper .eventsImage {
-    float: none;
-    width: calc(100% - 20px);
-    margin: 0 0 0 20px; }
+  .comments form, .contactForm form {
+    padding: 10px; }
   p, .asideWrapper li, article .articleText p:nth-of-type(1), .asideWrapper a {
     font-size: 1.7rem; }
-  .commentContainer .commentsText .date {
-    font-size: 1.9rem; }
-  .about h3, .reservations .content:nth-of-type(1) h3, .reservations .content:nth-of-type(2) h3, .promotion h3, .events h3, main.blog h3, main.blog h3 {
+  .about h3, .contentRight h3, .contentLeft h3, .promotion h3, .events h3, main.blog h3 {
     font-size: 3rem; } }

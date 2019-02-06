@@ -1,17 +1,18 @@
+
+// blog page styles
+
+// header styles
 header.blog {
     @include secondaryHeader(url(../assets/blogHeader.jpg));
 }
 
-header.blog h2 {
-    margin-bottom: 80px;
-}
-
+// main styles
 main.blog {
     display: flex;
     flex-direction: row-reverse;
     background: $primaryColor;
     h3 {
-        @include headers(left, 1.17, .032em, white, 3.4rem);
+        @include headers(left, 1.17, .032em, $secondaryColor4, 3.4rem);
     }
     aside {
         width: 33.33%;
@@ -21,50 +22,7 @@ main.blog {
     }
 }
 
-.asideWrapper {
-    width: 70%;
-    margin: 100px auto 0;
-    background: $secondaryColor3;
-    padding: 30px;
-    p {
-        margin: 0;
-    }
-    .asideText {
-        padding-top: 125%;
-    }
-    .asideImage {
-        position: relative;
-        img {
-            width: 150%;
-            position: absolute;
-            right: 0;
-            top: -60px;
-        }
-    }
-    a {
-        @include text($secondaryColor1, 1.95rem);  
-    }
-    ul {
-        padding: 0;
-        margin: 0;
-    }
-    li {
-        @include text(white, 1.95rem);
-        list-style: none;
-        position: relative;
-        padding-left: 40px;
-    }
-}
-
-.asideWrapper li::before {
-    color: $secondaryColor2;
-    content: "∙";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    font-size: 4rem;
-}
-
+// main content section styles
 article {
     .blogImage {
         position: relative;   
@@ -74,12 +32,12 @@ article {
         box-shadow: $shadowLeft;
         position: absolute;
         right: 0;
-        top: -150px;  
+        top: -120px;  
     }
     .articleText {
         border-left: 4px solid $secondaryColor1;
         border-bottom: 4px solid $secondaryColor1;
-        padding: 55% 0 75px;
+        padding: 60% 0 75px;
         p:nth-of-type(1) {
             @include text($secondaryColor1, 1.95rem);
             margin-top: 0;
@@ -118,9 +76,51 @@ article {
     margin: 30px 0 100px;
 }
 
-
 .comments form{
     @include formStyle($primaryColor, $secondaryColor1);
 }
 
+// aside section styles
+.asideWrapper {
+    width: 70%;
+    margin: 100px auto 0;
+    background: $secondaryColor3;
+    padding: 30px;
+    p {
+        margin: 0;
+    }
+    .asideText {
+        padding-top: 125%;
+    }
+    .asideImage {
+        position: relative;
+        img {
+            width: 150%;
+            position: absolute;
+            right: 0;
+            top: -60px;
+        }
+    }
+    a {
+        @include text($secondaryColor1, 1.95rem);  
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        @include text($secondaryColor4, 1.95rem);
+        list-style: none;
+        position: relative;
+        padding-left: 40px;
+    }
+}
 
+.asideWrapper li::before {
+    color: $secondaryColor2;
+    content: "∙";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 4rem;
+}

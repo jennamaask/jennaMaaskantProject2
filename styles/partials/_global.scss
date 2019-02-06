@@ -1,7 +1,10 @@
+
+// scss variables
 $primaryColor: #111010;
 $secondaryColor1: #ff8327;
 $secondaryColor2: #bf2603;
 $secondaryColor3: #220303;
+$secondaryColor4: #fff;
 $footerColor:  	#505050;
 $shadowLeft: -20px 20px $secondaryColor1;
 $shadowRight: 20px 20px $secondaryColor1;
@@ -9,6 +12,7 @@ $shadowRight: 20px 20px $secondaryColor1;
 $baseFont: "Chathura", sans-serif;
 $logoFont: "Tulpen One", cursive;
 
+// scss mixins
 @mixin text($color, $fontSize) {
     font-family: $baseFont;
     font-size: $fontSize;
@@ -38,7 +42,7 @@ $logoFont: "Tulpen One", cursive;
 }
 
 @mixin button($padding) {
-    @include logo(.078em, 1.6rem, white);
+    @include logo(.078em, 1.6rem, $secondaryColor4);
     text-decoration: none;
     background: $secondaryColor2;
     padding: 5px $padding;
@@ -50,7 +54,7 @@ $logoFont: "Tulpen One", cursive;
     background-size: cover;
     background-position: center center;
     h2 {
-        @include headers(left, 1.14, .0311em, white, 4.18rem)
+        @include headers(left, 1.14, .0311em, $secondaryColor4, 4.18rem)
     }
     height: 55vh;
 }
@@ -66,13 +70,13 @@ $logoFont: "Tulpen One", cursive;
         padding: 20px;
         border: none;
         background: $backgroundColor;
-        color: white;
+        color: $secondaryColor4;
     }
     input:focus, textarea:focus {
         box-shadow: 0 0 15px $borderColor;
     }
     input::placeholder {
-        color: white;
+        color: $secondaryColor4;
         opacity: 1;
     }
     input[type=text] {
@@ -85,7 +89,7 @@ $logoFont: "Tulpen One", cursive;
         border-bottom: 2px solid $borderColor;
     }
     textarea {
-        color: white;
+        color: $secondaryColor4;
         width: 100%;
         padding: 20px;
         border: 2px solid $borderColor;
@@ -93,7 +97,7 @@ $logoFont: "Tulpen One", cursive;
         margin: 50px 0
     }
     textarea::placeholder {
-        color: white;
+        color: $secondaryColor4;
         opacity: 1;
     }
     .button {
@@ -102,12 +106,13 @@ $logoFont: "Tulpen One", cursive;
     }
 }
 
+// global styles
 html {
     font-size: 125%;
 }
 
 p {
-   @include text(white, 1.95rem);
+   @include text($secondaryColor4, 1.95rem);
 }
 
 h1 {
@@ -129,6 +134,6 @@ img {
 }
 
 a.button:hover {
-    background: white;
+    background: $secondaryColor4;
     color: $secondaryColor2;
 }
