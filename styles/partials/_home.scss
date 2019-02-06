@@ -1,5 +1,5 @@
 
-i.main {
+i.home {
     color: white;
     background: $secondaryColor2;
     border-radius: 50%;
@@ -25,8 +25,8 @@ i.main {
     align-items: center;
 }
 
-header.main {
-    background: url('../assets/homeHeader.jpg');
+header.home {
+    background: url(../assets/homeHeader.jpg);
     height: 80vh;
     position: relative;
     display: flex;
@@ -35,21 +35,21 @@ header.main {
     position: relative;
 }
 
-header.main .wrapper {
+header.home .wrapper {
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-header figure {
+.headerImage {
     width: 50%;
     position: absolute;
     right: 0;
     bottom: -125px;
 }
 
-header.main h3 {
+header.home h3 {
     @include headers(center, 1.15, .0325em, white, 4rem);
     position: absolute;
     bottom: -20px;
@@ -100,7 +100,7 @@ header.main h3 {
     display: flex;
     flex-wrap: wrap;
     background: $secondaryColor3;
-    figure {
+    .reservationsImage {
         position: relative;
         width: calc(50% - 120px);
     }
@@ -116,7 +116,7 @@ header.main h3 {
     }
 }
 
-.reservations figure:nth-of-type(1) {
+.reservationsImageLeft {
     // float: left;
     margin: 0 120px 0 0;
     top: -50px;
@@ -130,7 +130,7 @@ header.main h3 {
     }
 }
 
-.reservations figure:nth-of-type(2) {
+.reservationsImageRight {
     // float: right;
     // width: calc(50% - 120px);
     bottom: -50px;
@@ -145,7 +145,7 @@ header.main h3 {
     }
 }
 
-.reservations .content:nth-of-type(1) {
+.reservations .content:nth-of-type(2) {
     // float: left;
     width: calc(50% - 120px);
     padding-right: calc((50% - 120px) - 500px);
@@ -159,7 +159,7 @@ header.main h3 {
     }
 }
 
-.reservations .content:nth-of-type(2) {
+.reservations .content:nth-of-type(4) {
     // float: left;
     // width: calc(50% - 120px);
     // margin: 20px 100px 100px 0;
@@ -210,7 +210,7 @@ header.main h3 {
     .wrapper {
         display: flex;
         flex-wrap: wrap;
-        figure {
+        .eventsImage {
             width: calc(30% - 60px);
             margin-right: 60px;
             padding-top: 20px;
@@ -242,21 +242,21 @@ header.main h3 {
     padding: 100px 0;
     .wrapper {
         display: flex;
-        figure {
+        li {
             width: calc(33.33% - (80/3));
         }
     }
 }
 
-.gallery figure:nth-child(1) {
+.gallery li:nth-child(1) {
     margin-right: 20px;
 }
 
-.gallery figure:nth-child(2) {
+.gallery li:nth-child(2) {
     margin: 0 20px;
 }
 
-.gallery figure:nth-child(3) {
+.gallery li:nth-child(3) {
     margin-left: 20px;
 }
 

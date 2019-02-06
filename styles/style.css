@@ -133,7 +133,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.visuallyhidden:not(:focus):not(:active) {
+.visuallyHidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -180,7 +180,7 @@ a.button:hover {
   background: white;
   color: #bf2603; }
 
-i.main {
+i.home {
   color: white;
   background: #bf2603;
   border-radius: 50%;
@@ -207,8 +207,8 @@ i.main {
   -ms-flex-align: center;
   align-items: center; }
 
-header.main {
-  background: url("../assets/homeHeader.jpg");
+header.home {
+  background: url(../assets/homeHeader.jpg);
   height: 80vh;
   position: relative;
   display: -webkit-box;
@@ -223,7 +223,7 @@ header.main {
   justify-content: space-between;
   position: relative; }
 
-header.main .wrapper {
+header.home .wrapper {
   height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,13 +236,13 @@ header.main .wrapper {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-header figure {
+.headerImage {
   width: 50%;
   position: absolute;
   right: 0;
   bottom: -125px; }
 
-header.main h3 {
+header.home h3 {
   font-family: "Chathura", sans-serif;
   font-weight: 700;
   text-align: center;
@@ -305,7 +305,7 @@ header.main h3 {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background: #220303; }
-  .reservations figure {
+  .reservations .reservationsImage {
     position: relative;
     width: calc(50% - 120px); }
   .reservations .content {
@@ -323,28 +323,28 @@ header.main h3 {
     .reservations .content p {
       margin: 0 0 30px; }
 
-.reservations figure:nth-of-type(1) {
+.reservationsImageLeft {
   margin: 0 120px 0 0;
   top: -50px; }
-  .reservations figure:nth-of-type(1) img {
+  .reservationsImageLeft img {
     -webkit-box-shadow: 20px 20px #ff8327;
     box-shadow: 20px 20px #ff8327; }
 
-.reservations figure:nth-of-type(2) {
+.reservationsImageRight {
   bottom: -50px;
   margin: 0 0 0 120px;
   -webkit-box-ordinal-group: 5;
   -ms-flex-order: 4;
   order: 4; }
-  .reservations figure:nth-of-type(2) img {
+  .reservationsImageRight img {
     -webkit-box-shadow: -20px 20px #ff8327;
     box-shadow: -20px 20px #ff8327; }
 
-.reservations .content:nth-of-type(1) {
+.reservations .content:nth-of-type(2) {
   width: calc(50% - 120px);
   padding-right: calc((50% - 120px) - 500px);
   margin-left: 120px; }
-  .reservations .content:nth-of-type(1) h3 {
+  .reservations .content:nth-of-type(2) h3 {
     font-family: "Chathura", sans-serif;
     font-weight: 700;
     text-align: left;
@@ -353,11 +353,11 @@ header.main h3 {
     color: white;
     font-size: 3.4rem; }
 
-.reservations .content:nth-of-type(2) {
+.reservations .content:nth-of-type(4) {
   margin-right: 120px;
   padding-bottom: 50px;
   padding-left: calc((50% - 120px) - 505px); }
-  .reservations .content:nth-of-type(2) h3 {
+  .reservations .content:nth-of-type(4) h3 {
     font-family: "Chathura", sans-serif;
     font-weight: 700;
     text-align: right;
@@ -365,7 +365,7 @@ header.main h3 {
     letter-spacing: 0.032em;
     color: white;
     font-size: 3.4rem; }
-  .reservations .content:nth-of-type(2) .button {
+  .reservations .content:nth-of-type(4) .button {
     -ms-flex-item-align: end;
     align-self: flex-end; }
 
@@ -423,7 +423,7 @@ header.main h3 {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-    .events .wrapper figure {
+    .events .wrapper .eventsImage {
       width: calc(30% - 60px);
       margin-right: 60px;
       padding-top: 20px; }
@@ -468,16 +468,16 @@ header.main h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .gallery .wrapper figure {
+    .gallery .wrapper li {
       width: calc(33.33% - (80/3)); }
 
-.gallery figure:nth-child(1) {
+.gallery li:nth-child(1) {
   margin-right: 20px; }
 
-.gallery figure:nth-child(2) {
+.gallery li:nth-child(2) {
   margin: 0 20px; }
 
-.gallery figure:nth-child(3) {
+.gallery li:nth-child(3) {
   margin-left: 20px; }
 
 nav ul {
@@ -658,6 +658,9 @@ header.blog {
     color: white;
     font-size: 4.18rem; }
 
+header.blog h2 {
+  margin-bottom: 80px; }
+
 main.blog {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -689,9 +692,9 @@ main.blog {
     margin: 0; }
   .asideWrapper .asideText {
     padding-top: 125%; }
-  .asideWrapper figure {
+  .asideWrapper .asideImage {
     position: relative; }
-    .asideWrapper figure img {
+    .asideWrapper .asideImage img {
       width: 150%;
       position: absolute;
       right: 0;
@@ -719,13 +722,13 @@ main.blog {
 
 .asideWrapper li::before {
   color: #bf2603;
-  content: '∙';
+  content: "∙";
   position: absolute;
   top: 50%;
   left: 0;
   font-size: 4rem; }
 
-article figure {
+article .blogImage {
   position: relative; }
 
 article img {
@@ -762,7 +765,7 @@ article .articleText {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-  .commentContainer figure {
+  .commentContainer .userImage {
     width: calc(15% - 20px);
     margin: 10px 40px 0 0; }
   .commentContainer .commentsText {
@@ -852,17 +855,17 @@ article .articleText {
 @media (max-width: 1250px) {
   .wrapper {
     width: 80%; }
-  .reservations figure:nth-of-type(1) {
+  .reservations .reservationsImageLeft {
     margin-right: 50px;
     width: calc(50% - 50px); }
-  .reservations figure:nth-of-type(2) {
-    margin-left: 50px;
-    width: calc(50% - 50px); }
-  .reservations .content:nth-of-type(1) {
-    padding-right: calc((50% - 50px) * 0.2);
+  .reservations .reservationsImageRight {
     margin-left: 50px;
     width: calc(50% - 50px); }
   .reservations .content:nth-of-type(2) {
+    padding-right: calc((50% - 50px) * 0.2);
+    margin-left: 50px;
+    width: calc(50% - 50px); }
+  .reservations .content:nth-of-type(4) {
     padding-left: calc((50% - 50px) * 0.2);
     margin-right: 50px;
     width: calc(50% - 50px); }
@@ -890,7 +893,7 @@ article .articleText {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .asideWrapper figure {
+    .asideWrapper .asideImage {
       width: 50%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -898,7 +901,7 @@ article .articleText {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
-      .asideWrapper figure img {
+      .asideWrapper .asideImage img {
         position: relative;
         width: 100%;
         top: 0; }
@@ -912,15 +915,15 @@ article .articleText {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .reservations .content:nth-of-type(1) {
-      margin: 0 auto;
-      width: 80%;
-      padding: 30px 0 80px; }
     .reservations .content:nth-of-type(2) {
       margin: 0 auto;
       width: 80%;
+      padding: 30px 0 80px; }
+    .reservations .content:nth-of-type(4) {
+      margin: 0 auto;
+      width: 80%;
       padding: 80px 0; }
-    .reservations figure:nth-of-type(2) {
+    .reservations .reservationsImageRight {
       -webkit-box-ordinal-group: inherit;
       -ms-flex-order: inherit;
       order: inherit;
@@ -928,7 +931,7 @@ article .articleText {
       top: 0;
       right: -10px;
       width: calc(100% - 20px); }
-    .reservations figure:nth-of-type(1) {
+    .reservations .reservationsImageLeft {
       margin: 0;
       width: calc(100% - 20px); }
   .promotion {
@@ -937,7 +940,7 @@ article .articleText {
       padding-bottom: 85px; }
   .events {
     padding: 60px 0; }
-    .events .wrapper figure {
+    .events .wrapper .eventsImage {
       width: calc(50% - 30px);
       margin-right: 30px; }
     .events .wrapper .content {
@@ -963,7 +966,7 @@ article .articleText {
         padding: 0; }
   .events .wrapper {
     display: block; }
-    .events .wrapper figure {
+    .events .wrapper .eventsImage {
       float: left;
       margin: 0 40px 40px 0; }
     .events .wrapper .content {
@@ -989,7 +992,7 @@ article .articleText {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .asideWrapper figure, .asideWrapper .asideText {
+    .asideWrapper .asideImage, .asideWrapper .asideText {
       width: 80%;
       margin: 0 auto;
       padding: 0; }
@@ -998,7 +1001,7 @@ article .articleText {
     margin: 0; }
   .comments form input[type=email] {
     width: 100%; }
-  .commentContainer figure {
+  .commentContainer .userImage {
     margin-right: 10px;
     width: calc(30% - 10px); }
   .commentContainer .commentsText {
@@ -1007,22 +1010,32 @@ article .articleText {
     padding: 45% 0 30px; } }
 
 @media (max-width: 768px) {
+  h1 {
+    font-size: 9rem; }
+  header.home h3 {
+    width: 100%;
+    bottom: -30px;
+    padding-right: 95px; }
+  .title {
+    width: 100%; }
   .about .wrapper .container h3 {
     width: 85%; }
   .about .wrapper .container .icon {
     width: 15%; }
   .promotion .wrapper {
     padding: 0 0 85px; }
+  .promotion h3 {
+    line-height: .75; }
   .gallery .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-  .gallery figure:nth-child(1) {
+  .gallery li:nth-child(1) {
     margin: 0 0 20px; }
-  .gallery figure:nth-child(2) {
+  .gallery li:nth-child(2) {
     margin: 20px 0; }
-  .gallery figure:nth-child(3) {
+  .gallery li:nth-child(3) {
     margin: 20px 0 0 0; }
   nav {
     width: 100%;
@@ -1077,9 +1090,9 @@ article .articleText {
     background: black; }
   input[type="checkbox"]:checked + .dropDown {
     top: 0; }
-  input[type='checkbox']:checked ~ header label.menu i.fa-bars {
+  input[type="checkbox"]:checked ~ header label.menu i.fa-bars {
     display: none; }
-  input[type='checkbox']:checked ~ header label.menu i.fa-times {
+  input[type="checkbox"]:checked ~ header label.menu i.fa-times {
     display: block;
     font-size: 1.5rem;
     cursor: pointer;
@@ -1099,10 +1112,15 @@ article .articleText {
     display: none; }
   nav.mainMenu ul {
     display: none; }
-  header figure {
+  .headerImage {
     display: none; } }
 
 @media (max-width: 414px) {
+  h1 {
+    font-size: 8rem;
+    text-align: center; }
+  header.home h3 {
+    padding-right: 65px; }
   main.blog .primaryContent .articleText {
     padding-top: 30%; }
   main.blog .primaryContent, .blogWrapper, .wrapper {
@@ -1116,7 +1134,7 @@ article .articleText {
     padding: 20px 0; }
     .asideWrapper .asideText {
       width: 95%; }
-  .events .wrapper figure {
+  .events .wrapper .eventsImage {
     float: none;
     width: calc(100% - 20px);
     margin: 0 0 0 20px; }

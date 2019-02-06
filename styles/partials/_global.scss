@@ -6,8 +6,8 @@ $footerColor:  	#505050;
 $shadowLeft: -20px 20px $secondaryColor1;
 $shadowRight: 20px 20px $secondaryColor1;
 
-$baseFont: 'Chathura', sans-serif;
-$logoFont: 'Tulpen One', cursive;
+$baseFont: "Chathura", sans-serif;
+$logoFont: "Tulpen One", cursive;
 
 @mixin text($color, $fontSize) {
     font-family: $baseFont;
@@ -119,7 +119,6 @@ h3 {
 }
 
 .wrapper {
-    // width: 80%;
     max-width: 1250px;
     margin: 0 auto;
 }

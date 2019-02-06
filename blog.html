@@ -11,6 +11,7 @@
     <title>Bar One | Blog</title>
 </head>
 <body>
+    <!-- drop down menu for mobile and tablet -->
     <input type="checkbox" id="menu" name="menu">
     <nav class='dropDown'>
         <ul>
@@ -19,9 +20,9 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+    </nav> <!-- end of dropDown -->
     <!-- header -->
-    <header class='blog'>
+    <header class="blog">
         <div class="wrapper">
             <nav class="mainMenu">
                 <label class="menu" for="menu"><i class="fas fa-bars"></i><i class="fas fa-times"></i></label>
@@ -30,21 +31,21 @@
                     <li><a href="index.html">Home</a></li>
                     <i class="fas fa-bars"></i>
                     <li><a href="index.html#about">About</a></li>
-                    <li class='logo'><a href="index.html">Bar One</a></li>
-                    <li class='current'><a href="blog.html">Blog</a></li>
+                    <li class="logo"><a href="index.html">Bar One</a></li>
+                    <li class="current"><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </nav>
+            </nav> <!-- end of mainMenu -->
             <h2>Blog</h2>
-        </div>
-    </header>
+        </div> <!-- end of wrapper -->
+    </header> <!-- end of blog -->
     <!-- start of main -->
-    <main class='blog'>
+    <main class="blog">
         <section class="primaryContent">
             <article>
-                <figure>
-                    <img src="assets/blogImage.jpg" alt="Multiple plates of food on raised dishes with labels diplayed in front of them. ">
-                </figure>
+                <div class="blogImage">
+                    <img src="assets/blogImage.jpg" alt="Multiple plates of food on raised dishes with labels diplayed in front of them.">
+                </div> <!-- end of blogImage -->
                 <div class="articleText">
                     <div class="blogWrapper">
                         <h3>New menu!</h3>
@@ -53,52 +54,52 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi rerum veniam nulla eaque sequi. Repudiandae quasi aperiam, nemo porro repellat soluta laborum non ipsa natus dignissimos voluptatum molestias architecto corporis sed, incidunt quos id autem! Magnam praesentium quibusdam dolorum perspiciatis.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit error ea beatae alias natus minus eos laudantium? Maiores iure soluta consectetur commodi possimus nostrum omnis similique exercitationem cum ea quis alias dolor quibusdam dolores, reiciendis neque amet eos aliquid quos! Pariatur autem earum atque ipsum mollitia nostrum dolores fuga qui quam repellendus nemo iusto, perspiciatis vel? Veniam dolores ipsum delectus mollitia. Eum corrupti iure, distinctio dolorum non laboriosam in veritatis.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reiciendis voluptas dolore facere id inventore, aperiam libero quaerat voluptates provident vitae molestias? Soluta, esse deleniti!</p>
-                    </div>
-                </div>
+                    </div> <!-- end of blogWrapper -->
+                </div> <!-- end of articleText -->
             </article>
             <section class="comments">
                 <div class="blogWrapper">
-                <h3>Comments:</h3>
+                    <h3>Comments:</h3>
                     <div class="commentContainer">
-                        <figure>
+                        <div class="userImage">
                             <img src="assets/commentImage1.jpg" alt="Women with a white shirt and gold earrings with greenery in the background.">
-                        </figure> 
+                        </div> <!-- end of userImage -->
                         <div class="commentsText">
-                            <p class='date'>Tuesday October 9th, 2019 by Sulaire</p>
+                            <p class="date">Tuesday October 9th, 2019 by Sulaire</p>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, placeat eveniet odit fugit corrupti corporis perspiciatis earum officiis soluta qui dicta veniam quos quaerat natus, dolorem distinctio ab reiciendis eligendi, sint obcaecati sed quidem explicabo!</p>
-                        </div> 
-                    </div>
+                        </div> <!-- end of commentsText -->
+                    </div> <!-- end of commentContainer -->
                     <div class="commentContainer">
-                        <figure>
+                        <div class="userImage">
                             <img src="assets/commentImage2.jpg" alt="Man with a dark beard in a grey shirt running his hand through his hair.">
-                        </figure>
+                        </div> <!-- end of userImage -->
                         <div class="commentsText">
                             <p class="date">Wednesday October 10th, 2019 by Renzo</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusantium ex quasi ducimus. Sint officia quasi eius incidunt!</p>
-                        </div>
-                    </div>
-                </div>
+                        </div> <!-- end of commentsText -->
+                    </div> <!-- end of commentContainer -->
+                </div> <!-- end of blogWrapper -->
                 <form action="">
-                    <label for="name" class="visuallyhidden">Name</label>
-                    <input type="text" id="name" name='name'placeholder="Name">
-                    <label for="email" class='visuallyhidden'>Email</label>
-                    <input type="email" id="email" name='email' placeholder="Email address">
-                    <textarea name="comment" id="comment" cols="30" rows="3" placeholder='Comment'></textarea>
-                    <input class='button' type="submit" value="Post Comment">
+                    <label for="name" class="visuallyHidden">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name">
+                    <label for="email" class='visuallyHidden'>Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email address">
+                    <textarea name="comment" id="comment" cols="30" rows="3" placeholder="Comment"></textarea>
+                    <input class="button" type="submit" value="Post Comment">
                 </form>
-            </section>
-        </section>
+            </section> <!-- end of comments -->
+        </section> <!-- end of primaryContent -->
         <aside>
             <div class="asideWrapper">
-                <figure>
+                <div class="asideImage">
                     <img src="assets/asideImage.jpg" alt="Pint of bear being poured from a draft tap.">
-                </figure>
+                </div> <!-- end of asideImage -->
                 <div class="asideText">
                     <div class="mission">
                         <h3>Our misson</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque earum rerum consequuntur!</p>
                         <a href="">Find out more</a>
-                    </div>
+                    </div> <!-- end of mission -->
                     <div class="links">
                         <h3>Recent Posts</h3>
                         <ul>
@@ -107,11 +108,11 @@
                             <li>Lorem ipsum dolor sit.</li>
                             <li>Lorem ipsum dolor sit.</li>
                         </ul>
-                    </div>
-                </div>
-            </div>
+                    </div> <!-- end of links -->
+                </div> <!-- end of asideText -->
+            </div> <!-- end of asideWrapper -->
         </aside>
-    </main>
+    </main> <!-- end of blog -->
     <!-- start of footer -->
     <footer>
         <p>Coppyright ©️ 2019 HackerYou</p>
